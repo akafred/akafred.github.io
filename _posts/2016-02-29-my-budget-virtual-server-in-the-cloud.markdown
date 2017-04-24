@@ -3,6 +3,14 @@ layout: post
 title:  "My budget virtual server in the cloud"
 dek:    "Setting up and securing my server"
 lede:   "Years ago I set up a blog and a couple of other things on a shared hosting-server; this was so long ago that virtualized servers were rare. Long overdue I am moving to a virtual private server - with a lot more flexibility. First step is to set up some basic provisioning (I use Ansible) and secure the server (using ufw and fail2ban)."
+image:
+  feature: 5518162733_a88aebc06c_z.jpg
+  title: "\"Yellow Clouds, Blue Sky\" (cropped)"
+  titlelink: https://www.flickr.com/photos/yortw/5518162733
+  credit: Yortw
+  creditlink: https://www.flickr.com/people/yortw/
+  license: CC BY 2.0
+  licenselink: https://creativecommons.org/licenses/by/2.0
 date:   2016-03-02 14:00:00
 categories: vps ansible ufw fail2ban debian vagrant
 ---

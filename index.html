@@ -4,19 +4,63 @@ layout: default
 
 <div class="home">
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        {% if post.dek %}<h3 class="post-dek">{{post.dek}}</h3>{% endif %}
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-        <div class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.update %} • <em>Updated: {{ post.update | date: "%b %-d, %Y" }}</em>{% endif %}</div>
-        {% if post.lede %}<p class="post-lede">{{post.lede}}</p>{% endif %}
-      </li>
-    {% endfor %}
-  </ul>
+    <div class="row pack">
 
-  <p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+        {% for post in paginator.posts %}
+            <div class="col-md-4 card">
 
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                    {% if post.dek %}<p class="post-dek">{{post.dek}}</p>{% endif %}
+                    <h3 class="panel-title pull-left">{{ post.title | truncate: 45 }}</h3><span class="post-meta pull-right"><small>{{ post.date | date: "%b %-d, %Y" }}</small></span>
+                  </div>
+                  {% if post.image %}
+                  <img width="100%" src="{{site.baseurl}}/img/{{post.image.feature}}" alt="{{post.title}}">
+                  {% else %}
+                  <img width="100%" src="{{site.baseurl}}/images/{{ site.default-image }}" alt="{{site.title}}">
+                  {% endif %}
+                  <div class="panel-body">
+                    {% if post.lede %}{{post.lede}}{% else %}
+                    {{ post.excerpt | strip_html | strip_newlines | truncate: 160 }}{% endif %}
+                    <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-primary btn-sm pull-right mt10">Read</a>
+                  </div>
+                </div>
+            </div>
+
+          {% endfor %}
+
+    </div>
+
+<div class="row">
+    <div class="col-md-4">  </div>
+    <div class="col-md-4">
+        {% if paginator.total_pages > 1 %}
+        <ul class="pagination">
+          {% if paginator.previous_page %}
+            <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a></li>
+          {% else %}
+            <li><span>&laquo; Prev</span></li>
+          {% endif %}
+
+          {% for page in (1..paginator.total_pages) %}
+            {% if page == paginator.page %}
+              <li class="active"><span><em>{{ page }}</em></span></li>
+            {% elsif page == 1 %}
+            <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
+            {% else %}
+            <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+            {% endif %}
+          {% endfor %}
+
+          {% if paginator.next_page %}
+            <li><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a></li>
+          {% else %}
+            <li><span >Next &raquo;</span></li>
+          {% endif %}
+          </ul>
+        {% endif %}
+
+    </div>
+    <div class="col-md-4">  </div>
+</div>
 </div>

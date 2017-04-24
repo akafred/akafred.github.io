@@ -3,6 +3,8 @@ layout: post
 title:  "My Notes From QCon London 2016"
 dek:    "I used my iPad Pro to take notes during the conference"
 lede:   "My fifth QCon I try a new way to keep engaged and concentrated during the talks. Usually I bore quite easily and my mind wanders off, but taking notes often helps me to focus. I use FreeMind to take notes on my laptop, but this time I have tried the Paper-app by fiftythree.com on my new iPad Pro (with the Apple Pencil)."
+image:
+  feature: qcon.jpeg
 date:   2016-03-10 16:00:00
 categories: qconlondon conference ipadpro notes
 ---

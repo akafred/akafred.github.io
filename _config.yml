@@ -8,6 +8,32 @@ url: "http://www.akafred.com" # the base hostname & protocol for your site
 twitter_username: akafred
 github_username:  akafred
 
-permalink: /:year/:month/:title/
+#sidebar
+default-image: akafred.com.jpeg
+
+#footer
+copyright:
+   name: akafred
+   link: 'http://www.akafred.com/about'
+
 # Build settings
 markdown: kramdown
+permalink: /:year/:month/:title/
+paginate: 6
+paginate_path: /page:num/
+
+# Comments
+disqus-shortname: akafred
+
+#social
+# facebook: http://facebook.com/webjeda
+# quora: http://quora.com/sharathdt
+twitter: http://twitter.com/@akafred
+github: http://github.com/akafred
+
+# Sass style
+sass:
+  style: compressed
+
+# Ruby Gems
+gems: [jekyll-paginate]

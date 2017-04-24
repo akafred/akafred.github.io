@@ -3,6 +3,14 @@ layout: post
 title:  "apt 1.0 - old dog with new tricks"
 dek:    "The package manager for Debian 'just' got more user friendly"
 lede:   "If you're a Debian (or Ubuntu) Linux user you can probably use the simpler 'apt'-command and forget about 'apt-get', 'apt-cache' and 'dpkg'."
+image:
+  feature: 6789958972_ca35be7d33_z.jpg
+  title: "Packaging (Feb '12)"
+  titlelink: https://www.flickr.com/photos/vfsdigitaldesign/6789958972/
+  credit: VFS Digital Design
+  creditlink: https://www.flickr.com/people/vfsdigitaldesign/
+  license: CC BY 2.0
+  licenselink: https://creativecommons.org/licenses/by/2.0
 date:   2016-02-28 08:00:00
 categories: linux devops package-management debian ubuntu
 ---

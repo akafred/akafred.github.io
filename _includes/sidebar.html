@@ -1,0 +1,52 @@
+<div class="col-md-4 mt20">
+        <div class="post-img">
+           {% if page.image %}
+            <img width="600" src="{{site.baseurl}}/img/{{page.image.feature}}" alt="{{page.title}}">
+            {% if page.image.credit %}
+            {% if page.image.title %}
+            {% if page.image.titlelink %}
+                <a href="{{ page.image.titlelink }}">
+                {% endif %}
+                  {{ page.image.title }}
+                {% if page.image.titlelink %}
+                </a>
+                {% endif %}
+              {% endif %}
+              {% if page.image.credit %}
+                by
+                  {% if page.image.creditlink %}
+                  <a href="{{ page.image.creditlink }}">
+                  {% endif %}
+                    <i>{{ page.image.credit }}</i>
+                  {% if page.image.creditlink %}
+                    </a>
+                  {% endif %}
+                {% endif %}
+                {% if page.image.license %}
+                  - licensed under
+                  {% if page.image.licenselink %}
+                  <a href="{{ page.image.licenselink }}">
+                  {% endif %}
+                    <i>{{ page.image.license }}</i>
+                  {% if page.image.licenselink %}
+                    </a>
+                  {% endif %}
+                  {% endif %}
+          {% endif %}
+            {% else %}
+            <img width="600" src="{{site.baseurl}}/images/{{site.default-image}}" alt="akafred.com">
+            {% endif %}
+        </div>
+
+
+        <div class="mt10 recent">
+            <h2>Recent articles</h2>
+             <ul>
+                {% for post in site.related_posts limit:3 %}
+                      <li>
+                      <p><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a><small>&nbsp;&nbsp;{{ post.date | date_to_string }}</small></p>
+                      </li>
+                {% endfor %}
+              </ul>
+        </div>
+</div>

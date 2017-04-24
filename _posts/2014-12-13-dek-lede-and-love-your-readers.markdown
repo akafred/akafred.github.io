@@ -3,6 +3,8 @@ layout: post
 title:  "Loving readers with dek and lede"
 dek:    "Usability tricks from the news business"
 lede:   "You can easily make your blog more usable with a couple of old-timer usability tricks. And doing so might give away that you care about your readers."
+image:
+  feature: dek-and-lede.png
 date:   2014-12-13 12:30:00
 update: 2014-12-16 20:05:00
 categories: blogging usability

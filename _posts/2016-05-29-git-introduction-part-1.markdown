@@ -3,6 +3,14 @@ layout: post
 title:  "Getting better at git - in 5 lessons"
 dek:    "Learning git using great stuff on the web"
 lede:   "Is git occasionally (or often) a mystery to you? - You are not alone! I have pulled in a few hand picked resources, in this post you get the first few bite-sized lessons."
+image:
+  feature: 3151544292_4516e65a3a_z.jpg
+  title: "\"Git\" (cropped)"
+  titlelink: https://www.flickr.com/photos/stevensnodgrass/3151544292
+  credit: Steve Snodgrass
+  creditlink: https://www.flickr.com/people/stevensnodgrass/
+  license: CC BY 2.0
+  licenselink: https://creativecommons.org/licenses/by/2.0
 date:   2016-05-29 21:00:00
 update: 2017-04-24 21:05:00
 categories: git dvcs
