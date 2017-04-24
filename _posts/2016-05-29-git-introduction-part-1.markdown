@@ -3,16 +3,17 @@ layout: post
 title:  "Getting better at git - in 5 lessons"
 dek:    "Learning git using great stuff on the web"
 lede:   "Is git occasionally (or often) a mystery to you? - You are not alone! I have pulled in a few hand picked resources, in this post you get the first few bite-sized lessons."
+image:
+  feature: /assets/3151544292_4516e65a3a_z.jpg
+  title: "\"Git\" (cropped)"
+  src: https://www.flickr.com/photos/stevensnodgrass/3151544292
+  creator-name: Steve Snodgrass
+  creator-url: https://www.flickr.com/people/stevensnodgrass/
+  license: CC BY 2.0
+  license-url: https://creativecommons.org/licenses/by/2.0
 date:   2016-05-29 21:00:00
 update: 2017-04-24 21:05:00
-categories: git dvcs
 tags: git dvcs
-image: /assets/124.jpg
-image-src: https://www.pexels.com/photo/shallow-focus-photography-of-black-and-gray-cordless-computer-mouse-near-black-flat-screen-computer-monitor-and-silver-and-black-laptop-computer-on-white-desk-60324/
-image-creator-name: Unsplash
-image-creator-url: www.unsplash.com
-image-license: CC0 License
-image-license-url: https://www.pexels.com/photo-license/
 ---
 
 A former client adopted git recently and not everyone there knew distributed version control all that well. To bring them up to speed I created a set of small "lessons" pointing to good resources. After a few lessons I promise that you will have fewer git-induced headaches.

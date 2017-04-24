@@ -11,7 +11,7 @@
 
     <div class="header-image">
       <div class="overlay"></div>
-      <img class="img-responsive" src="{{ page.image }}"/>
+      <img class="img-responsive" src="{{ page.image.feature }}"/>
     </div>
 
     <div class="post-header">
@@ -25,11 +25,11 @@
       <div class="post">
         <div class="image-attribution">
           <h3>
-          {% if page.image-src %}<a href="{{ page.image-src }}">Photo</a> {% endif %}
+          {% if page.image.src %}<a href="{{ page.image.src }}">Photo</a> {% endif %}
           by
-          {% if page.image-creator-name %}<a href="{{ page.image-creator-url }}">{{ page.image-creator-name }}</a> {% endif %}
+          {% if page.image.creator-name %}<a href="{{ page.image.creator-url }}">{{ page.image.creator-name }}</a> {% endif %}
           /
-          {% if page.image-license %}<a href="{{ page.image-license-url }}">{{ page.image-license }}</a> {% endif %}
+          {% if page.image.license %}<a href="{{ page.image.license-url }}">{{ page.image.license }}</a> {% endif %}
           | Modified from original.
           </h3>
         </div>
@@ -90,7 +90,7 @@
             <div class="card animated slideInUp">
               {% if post.image %}
               <div class="card-img">
-                <img class="img-responsive" src="{{ post.image }}" />
+                <img class="img-responsive" src="{{ post.image.feature }}" />
               </div>
               {% endif %}
               <div class="post-content">

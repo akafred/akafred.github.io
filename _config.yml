@@ -10,13 +10,27 @@ url: "http://www.akafred.com" # the base hostname & protocol for your site
 twitter_username: akafred
 github_username:  akafred
 
-permalink: /:year/:month/:title/
 # Build settings
 markdown: kramdown
 
 #Default settings
 paginate: 6
-paginate_path: "/blog/page:num"
+paginate_path: /page:num/
+
+permalink: /:year/:month/:title/
+
+# Sass style
+sass:
+  style: compressed
+
+# Comments
+disqus-shortname: akafred
+
+#social
+# facebook: http://facebook.com/webjeda
+# quora: http://quora.com/sharathdt
+twitter: http://twitter.com/@akafred
+github: http://github.com/akafred
 
 
 #Plugins

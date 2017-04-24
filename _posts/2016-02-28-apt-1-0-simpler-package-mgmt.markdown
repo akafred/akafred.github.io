@@ -3,15 +3,16 @@ layout: post
 title:  "apt 1.0 - old dog with new tricks"
 dek:    "The package manager for Debian 'just' got more user friendly"
 lede:   "If you're a Debian (or Ubuntu) Linux user you can probably use the simpler 'apt'-command and forget about 'apt-get', 'apt-cache' and 'dpkg'."
+image:
+  feature: /assets/6789958972_ca35be7d33_z.jpg
+  title: "Packaging (Feb '12)"
+  src: https://www.flickr.com/photos/vfsdigitaldesign/6789958972/
+  creator-name: VFS Digital Design
+  creator-url: https://www.flickr.com/people/vfsdigitaldesign/
+  license: CC BY 2.0
+  license-url: https://creativecommons.org/licenses/by/2.0
 date:   2016-02-28 08:00:00
-categories: linux devops package-management debian ubuntu
 tags: linux devops package-management debian ubuntu
-image: /assets/post4-image.jpg
-image-src: https://www.pexels.com/photo/gray-laptop-computer-showing-html-codes-in-shallow-focus-photography-160107/
-image-creator-name: Negative Space
-image-creator-url: http://negativespace.co/photos/laptop-notebook-and-iphone-stock-photo/
-image-license: CC0 License
-image-license-url: https://www.pexels.com/photo-license/
 ---
 Managing installed packages is a core \*nix-user skill. If you use Debian (or a Debian-derived Linux distro like Ubuntu) on servers you are probably familiar with `apt-get`, `apt-cache` and `dpkg`; or perhaps you have given in and turned to the text-ui of `aptitude`. APT, a tool that was originally released in 1998(!), got to version 1.0 in 2014(!!) and with the 1.0 release came a set of simpler commands for managing packages.
 
