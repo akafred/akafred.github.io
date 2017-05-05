@@ -1,6 +1,7 @@
 /**
  * Site header
  */
+ /*
 .site-header {
     border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
@@ -9,7 +10,21 @@
     // Positioning context for the mobile navigation icon
     position: relative;
 }
+*/
+.site-header {
+  border-bottom: 1px solid black;
+}
 
+.site-title {
+  text-align: center;
+}
+
+.header-separator {
+  width: 150px;
+  height: 1px;
+  margin: auto;
+}
+/*
 .site-title {
 
     font-size: 48px;
@@ -20,9 +35,9 @@
     float: left;
 
     margin-top: 10px;
-    background-image: url(akafred.png); 
-    background-repeat: no-repeat; 
-    background-position: left top; 
+    background-image: url(akafred.png);
+    background-repeat: no-repeat;
+    background-position: left top;
     padding-top: 25px;
     padding-left: 100px;
     padding-bottom: 25px;
@@ -32,6 +47,7 @@
         color: $grey-color-dark;
     }
 }
+*/
 
 .site-nav {
     float: right;
