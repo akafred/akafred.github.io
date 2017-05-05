@@ -1,0 +1,38 @@
+language: ruby
+rvm:
+  - 2.3.3
+
+branches:
+  only:
+  - reskin
+  - redesign
+
+env:
+  global:
+    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+    - secure: TmeSTbTPD8H49KLeU3Fpf10NCk6rdFeVs2X8lVSmwhotHzAYn3uwgiV2Jrbtpeg3ibKMXJkp7UN8inkSFUs0su1GMOSUAUIWJYKNxVFGo5t9DMs5O4/TbmtjDtyac0BehN8+fEYc+n6WwTYdWIu/+Y32zFpR7HlfG/UH+7PDDmf9SATdUPPRbpseCFBDtlcugafy8Z3qz1BBjht0L8jz+2X3VACezAOhQYm+t3gsCblcUopM+M6/betqarDeVXEEejw4ZkXhkqFg8W4Gk9SKFoTu0HzIIRoZq+IyJmWm4n3tKeAFFWwSKIq18LgVLsXhHGahPHBiTs5qDXelh3pgxSfJj89snA9gjKwGHMTnDbphmIPL2N0+QxaFjZ11T8lZ7ywf6Ul6Td5PGeGIiOSt3sAeK6bYnLv3ptKmZ/IkIWvFXXmikqkJuGLYetWcgb55YpL4lTMkifLYveTtw0zkndzbt3Cv19Mt/+8Fon/sLtN28W72OXsgF4E43Go0ccITWBpQjlP6EHte3RbKJ5e66nARMDS8cvIl+TiEMd6KJwRgRONY3DfbVIm4WII4om79fsCiex/KQRSitesya8SLttbHmOg0u4gyyJx16OHUqSRsHc/59Q3H39JEuAsJqozzHUt7yzWNe/XH4qqS1Xm7oGqHt0D8oWOCw0qa/Fn3LXA=
+    - secure: g4y3uaGgS0gR8kEvWau46SM1lO54bDN8jA5afA763g7BfFFZWZF7tlEk2fYC0ADu737bF9eWSmpRh8WwCJO3HVwDbhejtluRUz6HKegSUx5HI1LskO0ZYB8RMed/iPx9eC3RxfmcDAFmVUlfNpgSf/IOtTSe3foXHpyKb20OjhxfctEVcjs6ftAun7EGOo7MGIpvrm5c5m0/d1KsYAeYjifH9rtZePHHwSjt+eysPYEPPF9E4fNugSGFRez2YM35j784h63PgxHiHBV7ACCbVOiqmYok+mrj2la1P8ivJSQs9/s7hK/AcAnNkay1B/lx84ahZXDfEK4UOaJ6fDMptuh18EIpC25dn8vfZCyo9hafEbgG0YL1180i9qmoXyiw0sXZrH5kfcx93JG4DkDJ0mi+TfGR8VPcPMis6GvAjFKBuBMWIGCAQCaIx5TTGBSIrfkCAaYKg2Rqx9amzMrmp0FJ2hS0GQGwu8owDVUeEg5/ihPlIffLKGRer/RtfUy68A+mYzsbYkpQTa7Iu9m0Mo6ujSf/edWlyLpoGLQh2l4tZl2IQ4p0apLoxyqmBGgQZVw1BbHDrv1BMb9loLiBvbn09pJafF+iP/iLkYK/UX2BjieaGAbHiClJ12x88SUVnWMx0gTfxhd/b6ai8gL6E3L9q7rPVk/1DgXg8XjXd3s=
+
+sudo: false
+
+addons:
+  ssh_known_hosts:
+    - secure: "A8YzU3sV2rikOQSREyJdpYr4fQ45JlxDn+KVxVYNeKkxAK77xTVQWDgEE4sObo+jz0vVTsqZp7ibwa+oAGEHLupacB7lWhn1v3HrYpFSPLy1BfbK6sexB4OakkmQbA2be1K7AeMdQazCcvaPH2cJL2R98pNLgnwvwaFDFW4U92uqxlrHi/YKXJUNa/eqHn577kBLicu8s1DcKnvISgvGN3Pv+5EouOIEC0XPqa7HQauE9YIwT60fzgf6ysrirIodGxsoC4PCoYKFKbWL+mRPhMPpPIFEavrj4arpbU87/vUJBb+UCnU143zqphh9P68CzVgreVjKZkIQIgKCZK6qnWNBb7HAfSCh4el77xpctdPqJjQmzEaj7mPOG1UoBkApoWnpRFWK0FMsD+kDmD8dywMySiMhjvB5w2HADVFurD0UGLfo8GdKPTsATm2fJrXDNHVy27dGaKE+JgVAcYvpUqinyGfTMmY0+ne8NdpxhmpPM8mZGE/kdIbB88jyXNzAkFs1BwERScyNizaFWn22rXIg/LV/BqYOShE/BqeChEt6ZXOn49tlxZ1dsrNLEs9tkOckg5a0hlmYvIgLFgzS8C6s3QeDXwObotCFNSDk5zVHRPxd66MFM5dMCae5i600XZQKl/8+hzCCmYV0fVRh24f+3nndWObgsHZNqut8Px8="
+
+script: jekyll build
+
+# https://oncletom.io/2016/travis-ssh-deploy/
+
+before_install:
+- openssl aes-256-cbc -K $encrypted_c94348675399_key -iv $encrypted_c94348675399_iv -in deploy_rsa.enc -out /tmp/deploy_rsa -d
+- eval "$(ssh-agent -s)"
+- chmod 600 /tmp/deploy_rsa
+- ssh-add /tmp/deploy_rsa
+
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: ssh $SSH_USER@$DEPLOY_HOST "mkdir -p site/$TRAVIS_BRANCH" && rsync -r --delete-after --quiet $TRAVIS_BUILD_DIR/_site $SSH_USER@$DEPLOY_HOST:site/$TRAVIS_BRANCH
+  on:
+    all_branches: true
