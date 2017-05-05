@@ -4,18 +4,40 @@ layout: default
 
 <div class="home">
 
-  <ul class="post-list">
-    {% for post in paginator.posts %}
-      <li>
-        {% if post.dek %}<h3 class="post-dek">{{post.dek}}</h3>{% endif %}
+  <div class="post-list container">
+
+      <div class="row-1 card">
+        {% for post in paginator.posts limit: 1 %}
+        {% if post.image %}<img class="img-responsive" src="{{ post.image }}"/>{% endif %}
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
-        <div class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.update %} • <em>Updated: {{ post.update | date: "%b %-d, %Y" }}</em>{% endif %}</div>
+        {% if post.dek %}<h3 class="post-dek">{{post.dek}}</h3>{% endif %}
         {% if post.lede %}<p class="post-lede">{{post.lede}}</p>{% endif %}
-      </li>
-    {% endfor %}
-  </ul>
+        {% endfor %}
+      </div>
+
+      <div class="row-2">
+        {% for post in paginator.posts limit: 2 offset: 1 %}
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+        {% if post.dek %}<h3 class="post-dek">{{post.dek}}</h3>{% endif %}
+        {% if post.lede %}<p class="post-lede">{{post.lede}}</p>{% endif %}
+        {% endfor %}
+      </div>
+
+      <div class="row-3">
+        {% for post in paginator.posts limit: 3 offset: 3 %}
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+        {% if post.dek %}<h3 class="post-dek">{{post.dek}}</h3>{% endif %}
+        {% if post.lede %}<p class="post-lede">{{post.lede}}</p>{% endif %}
+        {% endfor %}
+      </div>
+
+  </div>
 
   {% if paginator.total_pages > 1 %}
 <div class="pagination">
@@ -41,7 +63,7 @@ layout: default
     <span>Next &raquo;</span>
   {% endif %}
 </div>
-{% endif %}  
+{% endif %}
 
   <p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
