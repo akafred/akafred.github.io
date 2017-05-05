@@ -22,7 +22,6 @@
   font-size: 30px;
 }
 
-
 .header-separator {
   width: 150px;
   margin: auto;
@@ -40,4 +39,17 @@
 
 .menu-icon {
   display: none;
+}
+
+.pagination {
+  text-align: center;
+}
+
+/**
+ * Posts
+ */
+.card {
+  border: 1px solid $grey-color;
+
+  box-shadow: 2px 2px 10px $grey-color;
 }
