@@ -23,7 +23,7 @@ layout: default
         {% for post in paginator.posts limit: 2 offset: 1 %}
         <div class="col-md-6">
           <div class="card">
-            {% if post.image %}<img class="img-responsive" src="{{ post.image }}"/>{% endif %}
+            {% if post.image %}<img class="img-responsive img-fluid" src="{{ post.image }}"/>{% endif %}
             <div class="post-content">
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>

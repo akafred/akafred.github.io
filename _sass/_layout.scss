@@ -115,6 +115,9 @@
   p {
     font-size: $card2-p;
   }
+  img {
+    max-height: 380px;
+  }
 }
 
 .row-3 {
@@ -126,5 +129,8 @@
   }
   p {
     font-size: $card3-p;
+  }
+  img {
+    height: 240px;
   }
 }
