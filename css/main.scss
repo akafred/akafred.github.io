@@ -13,7 +13,10 @@ $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
-
+// Button variables
+$button-font: 25px;
+$button-height: 50px;
+$button-width: 250px;
 
 // Main card row variables
 $card1-h1:         40px;
@@ -37,6 +40,7 @@ $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
 
 $green-color:      #587B7F;
+$green-color-dark: darken($green-color, 25%);
 
 $grey-color:       #95989A;
 $grey-color-light: lighten($grey-color, 40%);

@@ -91,6 +91,21 @@
 
 .post-content {
   padding: 0 $spacing-unit;
+  .button {
+    text-align: center;
+    height: $button-height;
+    width: $button-width;
+    font-size: $button-font;
+    background-color: $green-color;
+    padding: 7px;
+    margin: $spacing-unit auto;
+    a {
+      color: $background-color;
+    }
+    &:hover {
+      background-color: $green-color-dark;
+    }
+  }
 }
 
 .row-1 {
