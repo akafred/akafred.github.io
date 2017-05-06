@@ -40,6 +40,9 @@
   margin: auto;
   font-size: $base-font-size;
   text-transform: uppercase;
+  a:hover {
+    color: $brand-color;
+  }
 }
 
 .site-nav {
@@ -58,7 +61,22 @@
 }
 
 /**
- * Page content
+ * Page styles
+ */
+ .page-content {
+   .post-header {
+     text-align: center;
+     .post-title {
+       font-weight: 900;
+     }
+   }
+   .post-content {
+     font-size: $base-font-size * 1.5;
+   }
+ }
+
+/**
+ * Front page post card styles
  */
 .card {
   border: 1px solid $grey-color;
@@ -187,5 +205,6 @@
    }
    .text {
      color: $grey-color;
+     font-size: $base-font-size;
    }
  }
