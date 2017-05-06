@@ -1,18 +1,51 @@
----
-layout: default
----
-<div class="post">
+<!DOCTYPE html>
+<html>
 
-  <header class="post-header">
-	{% if page.dek %}<h2 class="post-dek">{{page.dek}}</h2>{% endif %}
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.update %} • <em>Updated: {{ page.update | date: "%b %-d, %Y" }}</em>{% endif %}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+{% include head.html %}
+
+<body>
+
+  <header class="post-page-header">
+    <div class="header-image">
+      <div class="overlay"></div>
+      <img class="img-responsive" src="{{ page.image }}"/>
+    </div>
+    <div class="wrapper">
+      <div class="site-title">
+        <a class="site-initials" href="{{ site.baseurl }}/">{{ site.initials}}</a>
+      </div>
+    </div>
+    <div class="post-header">
+      <h1 class="post-title">{{ page.title }}</h1>
+      <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.update %} &nbsp; | &nbsp; <em>Updated: {{ page.update | date: "%b %-d, %Y" }}</em>{% endif %}{% if page.author %} &nbsp; | &nbsp; {{ page.author }}{% endif %}{% if page.meta %} &nbsp; | &nbsp; {{ page.meta }}{% endif %}</p>
+    </div>
   </header>
 
-  <article class="post-content">
-    {% if page.lede %}<p class="post-lede">{{page.lede}}</p>{% endif %}
-    {{ content }}
-  </article>
+  <div class="page-content">
+    <div class="wrapper container">
+      <div class="post">
+        <div class="image-attribution container">
+          <h3>
+          {% if page.image-src %}<a href="{{ page.image-src }}">Photo</a> {% endif %}
+          by
+          {% if page.image-creator-name %}<a href="{{ page.image-creator-url }}">{{ page.image-creator-name }}</a> {% endif %}
+          /
+          {% if page.image-license %}<a href="{{ page.image-license-url }}">{{ page.image-license }}</a> {% endif %}
+          | Modified from original.
+          </h3>
+        </div>
 
-  {% include disqus.html %}
-</div>
+        <article class="post-content">
+          {% if page.lede %}
+          <p class="post-lede">{{page.lede}}</p>{% endif %} {{ content }}
+        </article>
+
+        {% include disqus.html %}
+      </div>
+    </div>
+  </div>
+
+  {% include footer.html %} {% include tracking.html %}
+</body>
+
+</html>
