@@ -269,3 +269,39 @@
      font-size: $base-font-size;
    }
  }
+
+ @include media-query($on-palm) {
+   .row-1, .row-2 {
+     h2 {
+       font-size: $card3-h1;
+     }
+     h3 {
+       font-size: $card3-h2;
+     }
+     p {
+       font-size: $card3-p;
+     }
+   }
+ };
+ @include media-query($on-laptop) {
+   .row-2 {
+     img {
+       max-height: 300px;
+     }
+     .card {
+       height: 800px;
+     }
+   }
+   .row-3 {
+     .card {
+       height: 650px;
+     }
+   }
+ };
+ @include media-query(375px) {
+   .row-1, .row-2 {
+     .card {
+       height: 700px;
+     }
+   }
+ };
