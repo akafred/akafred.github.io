@@ -6,6 +6,7 @@ lede:   "Is git occasionally (or often) a mystery to you? - You are not alone! I
 date:   2016-05-29 21:00:00
 update: 2017-04-24 21:05:00
 categories: git dvcs
+tags: git dvcs
 image: /assets/post1-image.jpeg
 image-src: https://www.pexels.com/photo/shallow-focus-photography-of-black-and-gray-cordless-computer-mouse-near-black-flat-screen-computer-monitor-and-silver-and-black-laptop-computer-on-white-desk-60324/
 image-creator-name: Unsplash
