@@ -251,8 +251,14 @@
 }
 
 /**
- * footer tag
+ *  tag-related styles
  */
+
+.tag-card {
+  .post-lede {
+    font-size: $card2-p * 1.1;
+  }
+}
  .header-tags {
    margin-bottom: $spacing-unit / 2;
    font-size: $base-font-size;
