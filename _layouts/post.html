@@ -50,6 +50,44 @@
 			{% endif %}
         </div>
 
+        {% assign posts_list = "" | split: "|" %}
+
+        {% if page.tags %}
+          {% for each_tag in page.tags %}
+            {% for each_post in site.tags[each_tag] %}
+              {% if each_post.title != page.title %}
+                {% assign posts_list = posts_list | push: each_post %}
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+          {% assign posts_list = posts_list | uniq %}
+        {% else %}
+          {% assign posts_list = site.posts %}
+        {% endif %}
+
+        <div class="related-posts">
+          <h3>Related Posts</h3>
+            <div class="row row-3 related-row">
+          {% for post in posts_list limit:include.limit %}
+          <div class="col-md-6">
+            <div class="card">
+              {% if post.image %}<img class="img-responsive" src="{{ post.image }}" />{% endif %}
+              <div class="post-content">
+                <h2>
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </h2> {% if post.dek %}
+                <h3 class="post-dek">&mdash; {{post.dek}}</h3>{% endif %} {% if post.lede %}
+                <p class="post-lede">{{post.lede}}</p>{% endif %}
+                <div class="button">
+                  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">READ MORE</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        </div>
+
         {% include disqus.html %}
       </div>
     </div>
