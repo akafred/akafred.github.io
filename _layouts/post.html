@@ -40,11 +40,14 @@
           <p class="post-lede">{{page.lede}}</p>{% endif %} {{ content }}
         </article>
 
-        <div class="tags">
-          <h4>Tags</h4>
-            {% for tag in page.tags %}
-              <a href="/tags/{{ tag }}/">{{ tag }}</a>
-            {% endfor %}
+        <div class="footer-tag">
+          <h2>Tagged under:
+					{% if page.tags.size > 0 %}
+					{% for tag in page.tags %}
+          <a href="{% if site.baseurl == "" %}/tag#{{ tag }}{% else %}{{ site.baseurl }}/tag#{{ tag }}{% endif %}" class="tag">{{ tag }}</a>
+					{% endfor %}
+          </h2>
+			{% endif %}
         </div>
 
         {% include disqus.html %}
