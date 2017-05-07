@@ -21,10 +21,9 @@ title: Tag
 	<div class="post-list container blog-list-container hidden" id="{{ t }}-container">
     <div class="row row-2">
 		{% for post in posts %}
-    <div class="col-md-6">
+      <div class="col-md-6">
         {% if post.tags contains t %}
-
-            <div class="card">
+            <div class="card tag-card">
   		      <img class="img-responsive" src="{{ post.image }}" />
   		      <div class="post-content">
   		        <h2>
@@ -37,8 +36,6 @@ title: Tag
   		        </div>
   		      </div>
           </div>
-
-
         {% endif %}
             </div>
       {% endfor %}
