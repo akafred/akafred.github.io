@@ -73,3 +73,9 @@ $on-laptop:        1200px;
         "layout",
         "syntax-highlighting"
 ;
+
+/* hides the tags list*/
+.hidden {
+  display: none!important;
+  visibility: hidden!important;
+}
