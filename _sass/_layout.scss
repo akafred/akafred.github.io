@@ -9,13 +9,9 @@
   text-transform: uppercase;
   font-weight: bold;
   background-color: $green-color;
-  .site-title {
-    color: $background-color;
-  }
   .trigger {
     font-size: 20px;
     float: right;
-    margin-top: 5px;
     letter-spacing: 1px;
   }
   a {
@@ -25,6 +21,16 @@
     &:hover {
       color: $grey-color;
       text-decoration: none;
+    }
+  }
+  .site-title {
+    a {
+      color: $background-color;
+      width: auto;
+      float: left;
+      &:hover {
+        color: $background-color;
+      }
     }
   }
 }
@@ -130,7 +136,6 @@
 .card {
   border: 1px solid $grey-color;
   width: 100%;
-  position: relative;
   margin-bottom: $spacing-unit / 2;
   margin-top: $spacing-unit;
   font-family: $base-font-family;
@@ -164,10 +169,6 @@
     height: 650px;
     overflow: hidden;
   }
-}
-
-.post-content {
-  padding: 0 $spacing-unit;
   .button {
     text-align: center;
     height: $button-height;
@@ -175,10 +176,7 @@
     font-size: $button-font;
     background-color: $green-color;
     padding-top: 10px;
-    position: absolute;
     margin: $spacing-unit auto;
-    left: 0; right: 0;
-    bottom: 0;
     a {
       color: $background-color;
     }
@@ -186,6 +184,10 @@
       background-color: $green-color-dark;
     }
   }
+}
+
+.post-content {
+  padding: 0 $spacing-unit;
 }
 
 .row-1 {
@@ -196,11 +198,10 @@
     font-size: $card1-h3;
   }
   p {
-    font-size: $card1-p;
-    margin-bottom: 120px;
+    font-size: $card1-p;;
   }
   .dek {
-    height: $card1-h3 * 2;
+    max-height: $card1-h3 * 2;
   }
 }
 
@@ -215,10 +216,7 @@
     font-size: $card2-p;
   }
   .card-img {
-    max-height: 350px;
-  }
-  .card {
-    height: 750px;
+    height: 300px;
   }
   .dek {
     height: $card2-h3 * 3;
@@ -236,11 +234,8 @@
     font-size: $card3-p;
   }
   .card-img {
-    max-height: 180px;
+    height: 150px;
     overflow: hidden;
-  }
-  .card {
-    height: 650px;
   }
   .dek {
     height: $card3-h3 * 4;
@@ -263,9 +258,6 @@
 }
 .tag-card {
   margin-bottom: $spacing-unit * 2;
-  .card-img {
-    height: 400px;
-  }
 }
  .header-tags {
    margin-bottom: $spacing-unit / 2;
@@ -355,9 +347,23 @@
  }
 
  @include media-query($on-palm) {
-   .row-1, .row-2 {
+   .site-title {
+     font-size: $card3-h2;
+   }
+   .site-phrase {
+     display: none;
+   }
+   .menu-icon {
+     display: block;
+     float: right;
+   }
+   .trigger {
+     display: none;
+   }
+   .row-1, .row-2, .row-3 {
      h2 {
        font-size: $card3-h2;
+       margin-top: -$spacing-unit;
      }
      h3 {
        font-size: $card3-h3;
@@ -365,27 +371,48 @@
      p {
        font-size: $card3-p;
      }
+     .card-img {
+       height: 250px;
+       overflow: hidden;
+     }
+     .dek {
+       height: $card3-h3 * 4;
+     }
+   }
+   .post-page-header {
+     .post-header {
+       .post-title {
+        font-size: $card2-h2;
+      }
+    }
+    .wrapper {
+      .site-initials {
+        font-size: $card1-h2;
+      }
+    }
+   }
+   .tag-card {
+     h2 {
+       margin-top: -$spacing-unit;
+     }
    }
  };
  @include media-query($on-laptop) {
-   .row-2 {
-     img {
-       max-height: 300px;
+   .row-1, .row-2, .row-3 {
+     h2 {
+       font-size: $card2-h2;
      }
-     .card {
-       height: 800px;
+     h3 {
+       font-size: $card2-h3;
      }
-   }
-   .row-3 {
-     .card {
-       height: 650px;
+     p {
+       font-size: $card2-p;
      }
-   }
- };
- @include media-query(375px) {
-   .row-1, .row-2 {
-     .card {
-       height: 700px;
+     .card-img {
+       height: 300px;
+     }
+     .dek {
+       height: $card2-h3 * 3;
      }
    }
  };

@@ -19,9 +19,9 @@ layout: default
         </h2> {% if post.dek %}
         <h3 class="post-dek">&mdash; {{post.dek}}</h3>{% endif %} {% if post.lede %}
         <p class="post-lede">{{post.lede}}</p>{% endif %}
-        <div class="button">
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">READ MORE</a>
-        </div>
+      </div>
+      <div class="button">
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">READ MORE</a>
       </div>
       {% endfor %}
     </div>
@@ -47,9 +47,9 @@ layout: default
             {% if post.lede %}
               <p class="post-lede">{{post.lede}}</p>
             {% endif %}
-            <div class="button">
-              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">READ MORE</a>
-            </div>
+          </div>
+          <div class="button">
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">READ MORE</a>
           </div>
         </div>
       </div>
@@ -67,7 +67,7 @@ layout: default
           {% endif %}
           <div class="post-content">
             <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
             </h2>
             {% if post.dek %}
             <div class="dek">
@@ -77,9 +77,9 @@ layout: default
             {% if post.lede %}
             <p class="post-lede">{{post.lede}}</p>
             {% endif %}
-            <div class="button">
-              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">READ MORE</a>
-            </div>
+          </div>
+          <div class="button">
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">READ MORE</a>
           </div>
         </div>
       </div>

@@ -83,10 +83,10 @@
           {% if posts_list %}
           <h3 class>Related Posts</h3>
           {% endif %}
-            <div class="row row-3 related-row">
+            <div class="row row-3">
               {% for post in posts_list limit: 3 %}
                 <div class="col-md-4">
-                  <div class="card">
+                  <div class="card tag-card">
                     {% if post.image %}
                     <div class="card-img">
                       <img class="img-responsive" src="{{ post.image }}" />
@@ -104,9 +104,9 @@
                       {% if post.lede %}
                         <p class="post-lede">{{post.lede}}</p>
                       {% endif %}
-                      <div class="button">
-                        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">READ MORE</a>
-                      </div>
+                    </div>
+                    <div class="button">
+                      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">READ MORE</a>
                     </div>
                   </div>
                 </div>

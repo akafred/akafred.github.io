@@ -1,12 +1,13 @@
 <header class="site-header">
 
     <div class="wrapper container-fluid">
-      <div class="row">
+
         <div class="site-title col-md-6">
-          <a href="{{ site.baseurl }}/">{{ site.initials}} &nbsp; // &nbsp; {{ site.phrase }}</a>
+          <a href="{{ site.baseurl }}/">{{ site.initials }} </a>
+          <a class="site-phrase" href="{{ site.baseurl }}/"> // &nbsp; {{ site.phrase }}</a>
         </div>
 
-        <nav class="site-nav col-md-6">
+        <nav class="site-nav">
           <a href="#" class="menu-icon">
             <i class="fa fa-bars"></i>
           </a>
@@ -19,7 +20,7 @@
               <a href="{{ " /feed.xml " | prepend: site.baseurl }}">RSS</a>
           </div>
         </nav>
-      </div>
+
     </div>
 
 </header>
