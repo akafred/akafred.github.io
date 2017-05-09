@@ -7,7 +7,11 @@ layout: default
   <div class="post-list container">
 
     <div class="row-1 card">
-      {% for post in paginator.posts limit: 1 %} {% if post.image %}<img class="img-responsive" src="{{ post.image }}" />{% endif %}
+      {% for post in paginator.posts limit: 1 %} {% if post.image %}
+      <div class="card-img">
+        <img class="img-responsive" src="{{ post.image }}" />
+      </div>
+      {% endif %}
       <div class="post-content">
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
@@ -25,13 +29,23 @@ layout: default
       {% for post in paginator.posts limit: 2 offset: 1 %}
       <div class="col-md-6">
         <div class="card">
-          {% if post.image %}<img class="img-responsive img-fluid" src="{{ post.image }}" />{% endif %}
+          {% if post.image %}
+          <div class="card-img">
+            <img class="img-responsive" src="{{ post.image }}" />
+          </div>
+          {% endif %}
           <div class="post-content">
             <h2>
               <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            </h2> {% if post.dek %}
-            <h3 class="post-dek">&mdash; {{post.dek}}</h3>{% endif %} {% if post.lede %}
-            <p class="post-lede">{{post.lede}}</p>{% endif %}
+            </h2>
+            {% if post.dek %}
+            <div class="dek">
+              <h3 class="post-dek">&mdash; {{post.dek}}</h3>
+            </div>
+            {% endif %}
+            {% if post.lede %}
+              <p class="post-lede">{{post.lede}}</p>
+            {% endif %}
             <div class="button">
               <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">READ MORE</a>
             </div>
@@ -45,13 +59,23 @@ layout: default
       {% for post in paginator.posts limit: 3 offset: 3 %}
       <div class="col-md-4">
         <div class="card">
-          {% if post.image %}<img class="img-responsive" src="{{ post.image }}" />{% endif %}
+          {% if post.image %}
+          <div class="card-img">
+            <img class="img-responsive" src="{{ post.image }}" />
+          </div>
+          {% endif %}
           <div class="post-content">
             <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2> {% if post.dek %}
-            <h3 class="post-dek">&mdash; {{post.dek}}</h3>{% endif %} {% if post.lede %}
-            <p class="post-lede">{{post.lede}}</p>{% endif %}
+            </h2>
+            {% if post.dek %}
+            <div class="dek">
+              <h3 class="post-dek">&mdash; {{post.dek}}</h3>
+            </div>
+            {% endif %}
+            {% if post.lede %}
+            <p class="post-lede">{{post.lede}}</p>
+            {% endif %}
             <div class="button">
               <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">READ MORE</a>
             </div>
@@ -75,7 +99,5 @@ layout: default
     <span>Next &raquo;</span> {% endif %}
   </div>
   {% endif %}
-
-  <p class="rss-subscribe">Subscribe <a href="{{ " /feed.xml " | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
