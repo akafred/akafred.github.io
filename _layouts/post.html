@@ -39,16 +39,21 @@
           {% if page.lede %}
           <p class="post-lede">{{page.lede}}</p>{% endif %} {{ content }}
         </article>
-
-        <div class="footer-tag">
-          <h2>Tagged under:
+        <div class="lower container">
+        <div class="footer-tag container">
+          <h2>
+          <i class="fa fa-tags"></i>
 					{% if page.tags.size > 0 %}
-					{% for tag in page.tags %}
-          <a href="{% if site.baseurl == "" %}/tag#{{ tag }}{% else %}{{ site.baseurl }}/tag#{{ tag }}{% endif %}" class="tag">{{ tag }}</a>
-					{% endfor %}
+					     {% for tag in page.tags %}
+               <span class="tag-btn">
+                <a href="{% if site.baseurl == "" %}/tag#{{ tag }}{% else %}{{ site.baseurl }}/tag#{{ tag }}{% endif %}" class="tag">{{ tag }}</a>
+              </span>
+               {% endfor %}
+			    {% endif %}
           </h2>
-			{% endif %}
+          {% include disqus.html %}
         </div>
+
 
         {% assign posts_list = "" | split: "|" %}
 
@@ -60,36 +65,56 @@
               {% endif %}
             {% endfor %}
           {% endfor %}
+
+          {%if posts_list != 3 %}
+            {% for post in site.posts %}
+              {% if post.title != page.title %}
+                {% assign posts_list = posts_list | push: post %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+
           {% assign posts_list = posts_list | uniq %}
         {% else %}
           {% assign posts_list = site.posts %}
         {% endif %}
 
-        <div class="related-posts">
-          <h3>Related Posts</h3>
+        <div class="related-posts container">
+          {% if posts_list %}
+          <h3 class>Related Posts</h3>
+          {% endif %}
             <div class="row row-3 related-row">
-          {% for post in posts_list limit:include.limit %}
-          <div class="col-md-6">
-            <div class="card">
-              {% if post.image %}<img class="img-responsive" src="{{ post.image }}" />{% endif %}
-              <div class="post-content">
-                <h2>
-              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            </h2> {% if post.dek %}
-                <h3 class="post-dek">&mdash; {{post.dek}}</h3>{% endif %} {% if post.lede %}
-                <p class="post-lede">{{post.lede}}</p>{% endif %}
-                <div class="button">
-                  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">READ MORE</a>
+              {% for post in posts_list limit: 3 %}
+                <div class="col-md-4">
+                  <div class="card">
+                    {% if post.image %}
+                    <div class="card-img">
+                      <img class="img-responsive" src="{{ post.image }}" />
+                    </div>
+                    {% endif %}
+                    <div class="post-content">
+                      <h2>
+                        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                      </h2>
+                      {% if post.dek %}
+                      <div class="dek">
+                        <h3 class="post-dek">&mdash; {{post.dek}}</h3>
+                      </div>
+                      {% endif %}
+                      {% if post.lede %}
+                        <p class="post-lede">{{post.lede}}</p>
+                      {% endif %}
+                      <div class="button">
+                        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">READ MORE</a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
+                {% endfor %}
             </div>
-          </div>
-          {% endfor %}
         </div>
-        </div>
-
-        {% include disqus.html %}
       </div>
+    </div>
     </div>
   </div>
 

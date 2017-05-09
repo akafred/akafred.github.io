@@ -46,7 +46,6 @@
    font-family: $base-font-family;
    color: $background-color;
    position: relative;
-   top: 0; left: 0;
    .header-image {
      position: relative;
      img {
@@ -66,14 +65,14 @@
    }
   .site-title {
       position: absolute;
-      top: 0; left: 0;
+      top: 5%; left: 2%;
       text-align: left;
       z-index: 2;
       border-bottom: none;
       .site-initials {
         color: $background-color;
-        font-size: 45px;
-        font-weight: 400;
+        font-size: 44px;
+        font-weight: bold;
         padding-left: $spacing-unit / 2;
         &:hover {
           text-decoration: none;
@@ -82,12 +81,16 @@
     }
     .post-header {
       z-index: 3;
+      width: 100%;
+      height: 30%;
+      margin: auto;
       position: absolute;
-      bottom: 20%; left: 12.5%;
+      top:0; bottom: 0; left: 0; right: 0;
+      text-align: center;
       .post-title {
         color: $background-color;
         font-weight: bold;
-        font-size: $card1-h2;
+        font-size: $card1-h2 * 1.5;
       }
       .post-meta {
         font-size: $base-font-size;
@@ -107,9 +110,16 @@
    }
  }
 
+.related-posts {
+  h3 {
+    font-size: 32px;
+    font-weight: bold;
+  }
+}
  .related-row {
    .card {
      height: 400px;
+     margin-bottom: $spacing-unit * 2;
    }
  }
 
@@ -229,7 +239,7 @@
     overflow: hidden;
   }
   .card {
-    height: 550px;
+    height: 650px;
   }
   .dek {
     height: $card3-h3 * 4;
@@ -268,14 +278,26 @@
    }
  }
 
+
 .footer-tag {
-  text-align: center;
-  h2 {
-    font-style: italic;
+  margin: $spacing-unit;
+  .tag-btn {
+    margin: $spacing-unit 5px;
+    height: 25px;
+    padding: 5px 12px;
+    border: 2px solid $grey-color;
+    border-radius: 5px;
+    &:hover {
+      background: $green-color;
+      border-color: $green-color;
+    }
   }
   .tag {
+    text-transform: uppercase;
+    color: $grey-color;
     &:hover {
       text-decoration: none;
+      color: $background-color;
     }
   }
 }
