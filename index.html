@@ -7,7 +7,8 @@ layout: default
   <div class="post-list container">
 
     <div class="row-1 card">
-      {% for post in paginator.posts limit: 1 %} {% if post.image %}
+      {% for post in paginator.posts limit: 1 %}
+      {% if post.image %}
       <div class="card-img">
         <img class="img-responsive" src="{{ post.image }}" />
       </div>
