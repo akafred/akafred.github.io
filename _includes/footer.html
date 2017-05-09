@@ -2,18 +2,21 @@
 
   <div class="wrapper">
 
+    <h2 class="footer-heading">{{ site.title }}</h2>
+    <p class="text">{{ site.description }}</p>
+
     <div class="social-media">
       <a href="https://twitter.com/{{ site.twitter_username }}">
         <i class="fa fa-twitter-square fa-2x"></i>
       </a>
-      <a href="https://github.com/{{ site.github_username }}">
+      <a class="site-email" href="https://github.com/{{ site.github_username }}">
         <i class="fa fa-github-square fa-2x"></i>
       </a>
     </div>
 
-    <h2 class="footer-heading">{{ site.title }}</h2>
-    <p class="text">{{ site.description }}</p>
-    <small><p class="text">Copyright © 2014-2016 {{ site.email }}</p></small>
+    <a href="mailto:{{ site.email }}" target="_top">{{ site.email }}</a>
+
+    <small><p class="copyright">Copyright © 2014-2016 {{ site.email }}</p></small>
   </div>
 
 </footer>

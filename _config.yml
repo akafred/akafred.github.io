@@ -1,6 +1,6 @@
 # Site settings
 title: "TIL: Today I Learned"
-initials: "TIL"
+initials: "T I L"
 phrase: "today i learned"
 email: akafred@akafred.com
 description: > # this means to ignore newlines until "baseurl:"

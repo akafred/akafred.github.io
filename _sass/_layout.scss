@@ -1,63 +1,36 @@
 /**
  * Site header
  */
-.site-header, .site-footer {
-  // Positioning context for the mobile navigation icon
-  //position: relative;
+.site-header {
   font-family: $base-font-family;
-  color: $text-color;
   text-decoration: none;
+  padding: $spacing-unit;
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: $green-color;
+  .site-title {
+    color: $background-color;
+  }
+  .trigger {
+    font-size: 20px;
+    float: right;
+    margin-top: 5px;
+    letter-spacing: 1px;
+  }
   a {
     color: $text-color;
+    padding: 0 $spacing-unit/3;
+    color: $background-color;
     &:hover {
-      color: $text-color;
+      color: $grey-color;
       text-decoration: none;
     }
   }
 }
 
-.site-title {
-  text-align: center;
-  border-bottom: 1px solid $green-color;
-  margin-top: $spacing-unit;
-  padding-bottom: $spacing-unit;
-}
-
-.site-initials {
-  font-size: 45px;
-}
-
-.site-phrase {
-  font-size: 30px;
-}
-
-.header-separator {
-  width: 150px;
-  margin: auto;
-}
-
-.trigger {
-  margin: auto;
-  font-size: $base-font-size;
-  text-transform: uppercase;
-  a:hover {
-    color: $brand-color;
-  }
-}
-
-.site-nav {
-  text-align: center;
-  margin-top: $spacing-unit / 3;
-  margin-bottom: $spacing-unit / 3;
-}
-
 .menu-icon {
   display: none;
-}
-
-.pagination {
-  text-align: center;
-  font-size: $base-font-size * 1.2;
 }
 
 /**
@@ -305,20 +278,36 @@
  * Footer
  */
  .site-footer {
-   border-top: 1px solid $green-color;
    text-align: center;
-   padding: $spacing-unit / 2;
-   .social-media a {
-     padding: 0 3px;
+   padding: $spacing-unit;
+   font-family: $base-font-family;
+   color: $background-color;
+   background-color: $green-color;
+   a {
+     color: $background-color;
+     text-decoration: none;
+     font-size: 31px;
+     &:hover {
+       color: $grey-color;
+       text-decoration: none;
+     }
    }
    .footer-heading {
-     padding-top: $spacing-unit / 2;
-     margin-bottom: $spacing-unit / 10;
+     font-size: 33px;
    }
-   .text {
-     color: $grey-color;
-     font-size: $base-font-size;
+   .text, .site-email {
+     font-size: 30px;
+     margin-bottom: $spacing-unit;
    }
+   .copyright {
+     font-size: 25px;
+     margin-top: $spacing-unit / 2;
+   }
+ }
+
+ .pagination {
+   text-align: center;
+   font-size: $base-font-size * 1.2;
  }
 
  @include media-query($on-palm) {

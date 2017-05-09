@@ -1,24 +1,25 @@
 <header class="site-header">
 
-  <div class="wrapper">
-    <div class="site-title">
-      <a class="site-initials" href="{{ site.baseurl }}/">{{ site.initials}}</a>
-      <hr class="header-separator"></hr>
-      <a class="site-phrase" href="{{ site.baseurl }}/">{{ site.phrase }}</a>
-  </div>
+    <div class="wrapper container-fluid">
+      <div class="row">
+        <div class="site-title col-md-6">
+          <a href="{{ site.baseurl }}/">{{ site.initials}} &nbsp; // &nbsp; {{ site.phrase }}</a>
+        </div>
 
-    <nav class="site-nav">
-      <a href="#" class="menu-icon">
-        <i class="fa fa-bars"></i>
-      </a>
+        <nav class="site-nav col-md-6">
+          <a href="#" class="menu-icon">
+            <i class="fa fa-bars"></i>
+          </a>
 
-      <div class="trigger">
-        {% for item in site.data.settings.menu %}
-          <a href="{% if site.baseurl == "/" %}{{ item.url }}{% else %}{{ item.url | prepend: site.baseurl }}{% endif %}">{{ item.name }}</a>
-        {% endfor %}
+          <div class="trigger">
+              <a href="{{ site.baseurl }}/" >HOME</a>
+            {% for item in site.data.settings.menu %}
+              <a href="{% if site.baseurl == "/" %}{{ item.url }}{% else %}{{ item.url | prepend: site.baseurl }}{% endif %}">{{ item.name }}</a>
+            {% endfor %}
+              <a href="{{ " /feed.xml " | prepend: site.baseurl }}">RSS</a>
+          </div>
+        </nav>
       </div>
-    </nav>
-
-  </div>
+    </div>
 
 </header>
