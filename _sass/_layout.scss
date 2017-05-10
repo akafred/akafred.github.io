@@ -81,7 +81,7 @@
       border-bottom: none;
       .site-initials {
         color: $background-color;
-        font-size: 44px;
+        font-size: 3em;
         font-weight: bold;
         padding-left: $spacing-unit / 2;
         &:hover {
@@ -100,7 +100,7 @@
       .post-title {
         color: $background-color;
         font-weight: bold;
-        font-size: $card1-h2 * 1.5;
+        font-size: 4em;
       }
       .post-meta {
         font-size: $base-font-size;
@@ -129,12 +129,6 @@
     font-weight: bold;
   }
 }
- .related-row {
-   .card {
-     height: 400px;
-     margin-bottom: $spacing-unit * 2;
-   }
- }
 
 /**
  * Front page post card styles
@@ -163,7 +157,6 @@
     margin-top: -10px;
   }
   p {
-    padding-top: $spacing-unit / 3;
     color: $grey-color-dark;
     line-height: $base-line-height / 1.2;
   }
@@ -174,8 +167,13 @@
     float: left;
     margin-bottom: 10px;
   }
+  .dek {
+    float: left;
+    margin-bottom: 2em;
+  }
   .lede {
     float: left;
+    clear: both;
   }
   .button {
     text-align: center;
@@ -259,36 +257,12 @@
 .tag-card {
   margin-bottom: $spacing-unit * 2;
   .lede {
-    height: 12em;
     float: left;
   }
   .button {
     clear: both;
   }
 }
- .header-tags {
-   margin-bottom: $spacing-unit / 2;
-   font-size: $base-font-size;
-   text-align: center;
-   .tag {
-     line-height: 2;
-     background-color: $green-color;
-     padding: 6px 10px;
-     margin: 1px 3px;
-     border-radius: 5px;
-     a {
-       color: $background-color;
-       &:hover {
-         text-decoration: none;
-       }
-     }
-     &:hover {
-       background-color: $green-color-dark;
-       cursor: pointer;
-     }
-   }
- }
-
 
 .footer-tag {
   margin: $spacing-unit;
@@ -378,18 +352,27 @@
    }
    .card {
      h2 {
-       font-size: $card1-h2;
+       font-size: $card2-h2;
      }
      h3 {
-       font-size: $card1-h3;
+       font-size: $card2-h3;
      }
      p {
-       font-size: $card1-p;;
+       font-size: $card2-p;;
      }
    }
-   .row-1, .row-3 {
+   .row-1, .row-3, .tag-card {
      .card-img {
        height: 300px;
+     }
+   }
+   .post-page-header {
+     .site-title {
+       font-size: .5em;
+     }
+     .post-header {
+       font-size: .5em;
+       padding: 15px;
      }
    }
  };
@@ -399,4 +382,71 @@
     .card-img {
       max-height: 150px;
     }
+    .dek {
+    }
+    .lede {
+      float: left;
+    }
+    .button {
+      clear: both;
+    }
  	}
+
+  /* Extra Small Devices, Phones */
+	@media only screen and (max-width : 480px) {
+    .tag-card {
+      .dek {
+        margin-bottom: $card2-h3 * 4;
+      }
+      .lede {
+        margin-top: 8px;
+      }
+    }
+    .post-page-header {
+      .site-title {
+        font-size: .5em;
+      }
+      .post-header {
+        font-size: .35em;
+        padding: 15px;
+        .post-meta {
+          font-size: 3em;
+        }
+      }
+    }
+	}
+
+
+  @media only screen and (min-width : 992px) {
+    .card {
+      h2 {
+        font-size: $card2-h2;
+      }
+      h3 {
+        font-size: $card2-h3;
+      }
+      p {
+        font-size: $card2-p;
+      }
+      .dek {
+        height: $card1-h2 * 2;
+      }
+    }
+    .tag-card {
+      .lede {
+        height: $card2-p * 17;
+      }
+    }
+	}
+  @media only screen and (min-width : 1200px) {
+    .card {
+      .dek {
+        height: $card1-h2 * 2;
+      }
+    }
+    .tag-card {
+      .lede {
+        height: $card2-p * 14;
+      }
+    }
+	}
