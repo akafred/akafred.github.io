@@ -5,14 +5,17 @@
   font-family: $base-font-family;
   text-decoration: none;
   padding: $spacing-unit;
-  font-size: 28px;
+  font-size: 1.5em;
   text-transform: uppercase;
   font-weight: bold;
   background-color: $green-color;
+  .site-nav {
+    padding-top: 4px;
+  }
   .trigger {
-    font-size: 20px;
+    font-size: 18px;
     float: right;
-    letter-spacing: 1px;
+    letter-spacing: 0.65px;
   }
   a {
     color: $text-color;
@@ -114,6 +117,9 @@
    .post-content {
      font-size: $base-font-size;
      font-family: $base-font-family;
+     .post-page-lede {
+       font-style: italic;
+     }
    }
  }
 
@@ -134,18 +140,15 @@
  * Front page post card styles
  */
 .card {
-  border: 1px solid $grey-color;
+  border: 1px solid $grey-color-light;
   width: 100%;
   margin-bottom: $spacing-unit / 2;
   margin-top: $spacing-unit;
   font-family: $base-font-family;
-  -webkit-box-shadow: 2px 2px 10px $grey-color;
-  -moz-box-shadow: 2px 2px 10px $grey-color;
-  box-shadow: 2px 2px 10px $grey-color;
   h2 {
     font-weight: bold;
-    padding-top: $spacing-unit / 2;
     line-height: 1.2;
+    clear: both;
   }
   a {
     color: $text-color;
@@ -166,8 +169,13 @@
   }
   .card-img {
     width: 100%;
-    height: 650px;
+    height: 500px;
     overflow: hidden;
+    float: left;
+    margin-bottom: 10px;
+  }
+  .lede {
+    float: left;
   }
   .button {
     text-align: center;
@@ -177,6 +185,7 @@
     background-color: $green-color;
     padding-top: 10px;
     margin: $spacing-unit auto;
+    clear: both;
     a {
       color: $background-color;
     }
@@ -200,9 +209,6 @@
   p {
     font-size: $card1-p;;
   }
-  .dek {
-    max-height: $card1-h3 * 2;
-  }
 }
 
 .row-2 {
@@ -217,9 +223,6 @@
   }
   .card-img {
     height: 300px;
-  }
-  .dek {
-    height: $card2-h3 * 3;
   }
 }
 
@@ -236,9 +239,6 @@
   .card-img {
     height: 150px;
     overflow: hidden;
-  }
-  .dek {
-    height: $card3-h3 * 4;
   }
 }
 
@@ -258,6 +258,13 @@
 }
 .tag-card {
   margin-bottom: $spacing-unit * 2;
+  .lede {
+    height: 12em;
+    float: left;
+  }
+  .button {
+    clear: both;
+  }
 }
  .header-tags {
    margin-bottom: $spacing-unit / 2;
@@ -312,7 +319,7 @@
  */
  .site-footer {
    text-align: center;
-   padding: $spacing-unit;
+   padding: $spacing-unit / 2;
    font-family: $base-font-family;
    color: $background-color;
    background-color: $green-color;
@@ -326,24 +333,33 @@
      }
    }
    .footer-heading {
-     font-size: 33px;
+     font-size: 18px;
    }
    .text, .site-email {
-     font-size: 30px;
+     font-size: 14px;
      margin-bottom: $spacing-unit;
    }
    .copyright {
-     font-size: 25px;
+     font-size: 12px;
      margin-top: $spacing-unit / 2;
    }
  }
 
  .pagination {
    text-align: center;
-   font-size: $base-font-size * 1.2;
+   font-size: $base-font-size * 1.5;
    font-family: $base-font-family;
    margin-top: $spacing-unit * 2;
    margin-bottom: $spacing-unit * 2;
+   color: $green-color;
+   font-weight: bold;
+   a {
+     color: $text-color;
+     &:hover {
+       text-decoration: none;
+       color: $text-color;
+     }
+   }
  }
 
  @include media-query($on-palm) {
@@ -360,59 +376,27 @@
    .trigger {
      display: none;
    }
-   .row-1, .row-2, .row-3 {
+   .card {
      h2 {
-       font-size: $card3-h2;
-       margin-top: -$spacing-unit;
+       font-size: $card1-h2;
      }
      h3 {
-       font-size: $card3-h3;
+       font-size: $card1-h3;
      }
      p {
-       font-size: $card3-p;
-     }
-     .card-img {
-       height: 250px;
-       overflow: hidden;
-     }
-     .dek {
-       height: $card3-h3 * 4;
+       font-size: $card1-p;;
      }
    }
-   .post-page-header {
-     .post-header {
-       .post-title {
-        font-size: $card2-h2;
-      }
-    }
-    .wrapper {
-      .site-initials {
-        font-size: $card1-h2;
-      }
-    }
-   }
-   .tag-card {
-     h2 {
-       margin-top: -$spacing-unit;
-     }
-   }
- };
- @include media-query($on-laptop) {
-   .row-1, .row-2, .row-3 {
-     h2 {
-       font-size: $card2-h2;
-     }
-     h3 {
-       font-size: $card2-h3;
-     }
-     p {
-       font-size: $card2-p;
-     }
+   .row-1, .row-3 {
      .card-img {
        height: 300px;
      }
-     .dek {
-       height: $card2-h3 * 3;
-     }
    }
  };
+
+ 	/* Small Devices, Tablets */
+ 	@media only screen and (max-width : 550px) {
+    .card-img {
+      max-height: 150px;
+    }
+ 	}

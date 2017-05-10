@@ -17,38 +17,38 @@ $button-height: 50px;
 $button-width: 180px;
 
 // Main card row variables
-$card1-h2:         40px;
-$card1-h3:         20px;
-$card1-p:          28px;
+$card1-h2:         2.4em;
+$card1-h3:         1.5em;
+$card1-p:          1.4em;
 
 //Second card row variables
-$card2-h2:         28px;
-$card2-h3:         14px;
-$card2-p:          22px;
+$card2-h2:         2em;
+$card2-h3:         1.3em;
+$card2-p:          1.2em;
 
 // Third card row variables
-$card3-h2:         24px;
-$card3-h3:         12px;
-$card3-p:          18px;
+$card3-h2:         1.5em;
+$card3-h3:         1em;
+$card3-p:          0.9em;
 
 $spacing-unit:     30px;
 
 $text-color:       #111;
-$background-color: #fdfdfd;
+$background-color: #f3f3f3;
 $brand-color:      #78C0E0;
 
 $green-color:      #587B7F;
 $green-color-dark: darken($green-color, 25%);
 
 $grey-color:       #95989A;
-$grey-color-light: lighten($grey-color, 40%);
+$grey-color-light: lighten($grey-color, 30%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
 $content-width:    800px;
 
-$on-palm:          700px;
-$on-laptop:        900px;
+$on-palm:          950px;
+$on-laptop:        1200px;
 
 
 
