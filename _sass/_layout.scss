@@ -38,7 +38,7 @@
   }
 }
 
-.menu-icon {
+.menu-icon, .nav-title, .nav-footer {
   display: none;
 }
 
@@ -346,9 +346,55 @@
    .menu-icon {
      display: block;
      float: right;
+     color: $background-color;
+     &:hover, &:active, &:visited {
+       color: $background-color;
+     }
    }
    .trigger {
      display: none;
+   }
+   .show {
+     display: none;
+     width: 100%;
+     position: relative;
+     bottom: -30%;
+     text-align: center;
+   }
+   .open-nav {
+     height: 100%;
+     width: 100%;
+     background-color: $green-color;
+     z-index: 6;
+     position: fixed;
+     top: 0; left: 0;
+     transition: 0.5s;
+     .nav-title {
+       display: inline-block;
+       font-size: .85em;
+       position: relative;
+       margin-top: 3.5px;
+       padding-top: $spacing-unit;
+       padding-left: $spacing-unit * 2;
+     }
+     .menu-icon {
+       padding-top: $spacing-unit;
+       padding-right: $spacing-unit * 2;
+     }
+     .trigger {
+       display: block;
+       position: relative;
+       top: 50%;
+       width: 100%;
+       margin-top: $spacing-unit * 4;
+       text-align: center;
+       a {
+         display: block;
+         transition: .3s;
+         margin: $spacing-unit;
+       }
+     }
+
    }
    .card {
      h2 {
@@ -377,7 +423,6 @@
    }
  };
 
- 	/* Small Devices, Tablets */
  	@media only screen and (max-width : 550px) {
     .card-img {
       max-height: 150px;
@@ -392,7 +437,6 @@
     }
  	}
 
-  /* Extra Small Devices, Phones */
 	@media only screen and (max-width : 480px) {
     .tag-card {
       .dek {
@@ -438,6 +482,7 @@
       }
     }
 	}
+
   @media only screen and (min-width : 1200px) {
     .card {
       .dek {

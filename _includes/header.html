@@ -8,6 +8,10 @@
         </div>
 
         <nav class="site-nav">
+          <div class="nav-title">
+            <a href="{{ site.baseurl }}/">{{ site.initials }} // {{ site.phrase }}</a>
+          </div>
+          
           <a href="#" class="menu-icon">
             <i class="fa fa-bars"></i>
           </a>
@@ -19,6 +23,20 @@
             {% endfor %}
               <a href="{{ " /feed.xml " | prepend: site.baseurl }}">RSS</a>
           </div>
+
+          <div class="nav-footer">
+            <div class="social-media">
+              <a href="https://twitter.com/{{ site.twitter_username }}">
+                <i class="fa fa-twitter-square"></i>
+              </a>
+              <a href="https://github.com/{{ site.github_username }}">
+                <i class="fa fa-github-square"></i>
+              </a>
+            </div>
+
+            <a class="site-email" href="mailto:{{ site.email }}" target="_top">{{ site.email }}</a>
+
+          </div
         </nav>
 
     </div>

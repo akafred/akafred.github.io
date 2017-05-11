@@ -35,3 +35,12 @@ if(window.location.hash) {
   var tag = window.location.hash.split('#')[1];
   filter(tag);
 }
+
+//nav functions
+$(document).ready(function() {
+  $(".site-nav").on("click", function() {
+    $(this).toggleClass("open-nav");
+    $(".open-nav").slideDown();
+    $(".nav-footer").toggleClass("show");
+  });
+});
