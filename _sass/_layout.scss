@@ -147,9 +147,10 @@
  */
 .card {
   border: 1px solid $grey-color-light;
+  background-color: $card-background;
   width: 100%;
   margin-bottom: $spacing-unit / 2;
-  margin-top: $spacing-unit;
+  margin-top: $spacing-unit / 2;
   font-family: $base-font-family;
   h2 {
     font-weight: bold;
