@@ -1,6 +1,6 @@
 ---
 layout: page
-title: akafred.com
+title: about
 permalink: /about/
 ---
 
