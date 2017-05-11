@@ -63,6 +63,19 @@
        width: 100%;
      }
    }
+   .site-nav {
+     position: absolute;
+     top: 6%; right: 10%;
+     z-index: 7;
+     .menu-icon {
+       font-size: 1.5em;
+       margin-top: 5px;
+
+     }
+     .trigger {
+       display: hidden;
+     }
+   }
    .overlay {
      position: absolute;
      top: 0;
@@ -78,7 +91,6 @@
       top: 5%; left: 2%;
       text-align: left;
       z-index: 2;
-      border-bottom: none;
       .site-initials {
         color: $background-color;
         font-size: 3em;
@@ -347,6 +359,7 @@
      display: block;
      float: right;
      color: $background-color;
+     z-index: 4;
      &:hover, &:active, &:visited {
        color: $background-color;
      }
@@ -360,12 +373,15 @@
      position: relative;
      bottom: -30%;
      text-align: center;
+     .site-email {
+       text-transform: lowercase;
+     }
    }
    .open-nav {
      height: 100%;
      width: 100%;
      background-color: $green-color;
-     z-index: 6;
+     z-index: 10;
      position: fixed;
      top: 0; left: 0;
      transition: 0.5s;
@@ -394,7 +410,11 @@
          margin: $spacing-unit;
        }
      }
-
+     .nav-footer {
+       a {
+         margin: 0 -10px;
+       }
+     }
    }
    .card {
      h2 {
@@ -414,11 +434,40 @@
    }
    .post-page-header {
      .site-title {
-       font-size: .5em;
+       font-size: 1em;
      }
      .post-header {
        font-size: .5em;
        padding: 15px;
+     }
+     .open-nav {
+       position: fixed;
+       top: 0; left: 0;
+       font-weight: bold;
+       a {
+         color: $background-color;
+         text-decoration: none;
+         &:hover {
+           color: $grey-color;
+           text-decoration: none;
+         }
+       }
+       .nav-title {
+         font-size: 1.5em;
+         text-transform: uppercase;
+       }
+       .trigger {
+         position: absolute;
+         top: 10%;
+         font-size: 1.3em;
+         letter-spacing: 0.65px;
+       }
+       .nav-footer {
+         position: absolute;
+         bottom: 12%;
+         text-align: center;
+         font-size: 1.35em;
+       }
      }
    }
  };
@@ -426,8 +475,6 @@
  	@media only screen and (max-width : 550px) {
     .card-img {
       max-height: 150px;
-    }
-    .dek {
     }
     .lede {
       float: left;
@@ -459,7 +506,6 @@
       }
     }
 	}
-
 
   @media only screen and (min-width : 992px) {
     .card {
