@@ -5,6 +5,13 @@ dek:    "Uptime monitoring using UptimeRobot – in under 60 mins"
 lede:   "If you haven't got uptime monitoring on your site, there really is no excuse as you can set up something with minimal effort and free of charge."
 date:   2014-12-10 23:00:00
 categories: devops monitoring
+tags: devops monitoring
+image: /assets/post6-image.jpg
+image-src: https://www.pexels.com/photo/man-in-gray-dress-shirt-using-silver-ipad-29532/
+image-creator-name: Unsplash
+image-creator-url: www.unsplash.com
+image-license: CC0 License
+image-license-url: https://www.pexels.com/photo-license/
 ---
 My last customer was one of the top three web sites in Norway, and as their entire business was built on the web they were pretty advanced when it comes to IT-operations and monitoring their services. I learned a lot about ops during the three years I was there, and especially the last year when we built a new application which didn't have all the bells and whistles (and warts) of the somewhat older application stack we replaced.
 
