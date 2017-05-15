@@ -46,9 +46,12 @@
  * Page styles
  */
  .page {
+   margin-bottom: $spacing-unit * 2;
+   padding: $spacing-unit * 2;
    .post-title {
      text-align: center;
      font-weight: bold;
+     font-size: 3em;
    }
    margin-bottom: $spacing-unit * 2;
  }
@@ -56,6 +59,9 @@
    font-family: $base-font-family;
    color: $background-color;
    position: relative;
+   .trigger {
+     display: none;
+   }
    .header-image {
      position: relative;
      img {
@@ -70,10 +76,6 @@
      .menu-icon {
        font-size: 1.5em;
        margin-top: 5px;
-
-     }
-     .trigger {
-       display: hidden;
      }
    }
    .overlay {
