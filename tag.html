@@ -1,0 +1,44 @@
+---
+layout: default
+title: Tag
+---
+
+<div class="header-tags">
+    {% assign sorted_tags = site.tags | sort %}
+    {% for tag in sorted_tags %}
+      {% assign t = tag | first %}
+      {% assign posts = tag | last %}
+      <span class="tag">
+        <a href="{% if site.baseurl == "" %}/tag#{{ t }}{% else %}{{ site.baseurl }}/tag#{{ t }}{% endif %}" onclick="filter('{{ t }}'); return true;">{{ t }}</a>
+      </span>
+    {% endfor %}
+  </div>
+
+{% for tag in site.tags %}
+  {% assign t = tag | first %}
+  {% assign posts = tag | last %}
+
+	<div class="post-list container blog-list-container hidden" id="{{ t }}-container">
+    <div class="row row-2">
+		{% for post in posts %}
+      <div class="col-md-6">
+        {% if post.tags contains t %}
+            <div class="card tag-card">
+  		      <img class="img-responsive" src="{{ post.image }}" />
+  		      <div class="post-content">
+  		        <h2>
+  		          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+  		        </h2> {% if post.dek %}
+  		        <h3 class="post-dek">&mdash; {{post.dek}}</h3>{% endif %} {% if post.lede %}
+  		        <p class="post-lede">{{post.lede}}</p>{% endif %}
+  		        <div class="button">
+  		          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">READ MORE</a>
+  		        </div>
+  		      </div>
+          </div>
+        {% endif %}
+            </div>
+      {% endfor %}
+  </div>
+	</div>
+{% endfor %}
