@@ -5,6 +5,7 @@ rvm:
 branches:
   only:
   - reskin
+  - redesign-two
 
 env:
   global:
