@@ -63,9 +63,18 @@ $(document).ready(function(){
       });
 
       $('.post-page-header .menu-icon span').css('background-color', 'white');
+
+      if ($('div.show-menu').length !== 0) {
+        $('.post-page-header .site-nav').css({
+          'background-color': 'white',
+          'color': 'black'
+        });
+        $('.post-page-header .menu-icon span').css('background-color', 'black');
+      }
+      
     }
 
-    if ($('div.show-menu').length > 0) {
+    if ($('div.show-menu').length !== 0) {
       $('.post-page-header .site-nav').css({
         'background-color': 'white',
         'color': 'black'
