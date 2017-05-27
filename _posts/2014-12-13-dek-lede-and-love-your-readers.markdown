@@ -7,7 +7,7 @@ date:   2014-12-13 12:30:00
 update: 2014-12-16 20:05:00
 categories: blogging usability
 tags: blogging usability
-image: /assets/post5-image.jpeg
+image: /assets/post5-image.jpg
 image-src: https://www.pexels.com/photo/computer-keyboard-laptop-screen-109371/
 image-creator-name: Monoar Rahman
 image-creator-url: https://www.pexels.com/u/monoar-rahman-22660/

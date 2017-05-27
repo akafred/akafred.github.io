@@ -1,0 +1,26 @@
+.page-body {
+	background-color: $light-background;
+
+	a:hover {
+	 text-decoration: none;
+	}
+}
+
+.page-section {
+	width: 65%;
+	min-height: calc(100vh - 280px);
+	margin: 10em auto 0;
+
+	 @media screen and (max-width: 680px) {
+      width: 90%;
+     }
+
+	.page-title {
+	 font-size: 2rem;
+	 font-weight: bold;
+	}
+
+	.page-content {
+	 margin: 5em auto 0;
+	}
+}

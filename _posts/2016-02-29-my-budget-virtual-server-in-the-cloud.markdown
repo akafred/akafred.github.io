@@ -6,7 +6,7 @@ lede:   "Years ago I set up a blog and a couple of other things on a shared host
 date:   2016-03-02 14:00:00
 categories: vps ansible ufw fail2ban debian vagrant
 tags: vps ansible ufw fail2ban debian vagrant
-image: /assets/post3-image.jpeg
+image: /assets/post3-image.jpg
 image-src: https://www.pexels.com/photo/macbook-pro-94654/
 image-creator-name: Unsplash
 image-creator-url: www.unsplash.com

@@ -1,347 +1,23 @@
-/**
- * Site header
- */
-.site-header {
-  font-family: $base-font-family;
-  text-decoration: none;
-  padding: $spacing-unit;
-  font-size: 1.5em;
-  text-transform: uppercase;
-  font-weight: bold;
-  background-color: $green-color;
-  .site-nav {
-    padding-top: 4px;
-  }
-  .trigger {
-    font-size: 18px;
-    float: right;
-    letter-spacing: 0.65px;
-  }
-  a {
-    color: $text-color;
-    padding: 0 $spacing-unit/3;
-    color: $background-color;
-    &:hover {
-      color: $grey-color;
-      text-decoration: none;
-    }
-  }
-  .site-title {
-    a {
-      color: $background-color;
-      width: auto;
-      float: left;
-      &:hover {
-        color: $background-color;
-      }
-    }
-  }
-}
+@import '0-partials/menu.scss';
+@import '0-partials/page.scss';
+@import '0-partials/post.scss';
+@import '0-partials/home-cards.scss';
+@import '0-partials/tag.scss';
+@import '0-partials/footer.scss';
 
-.menu-icon, .nav-title, .nav-footer {
-  display: none;
-}
-
-/**
- * Page styles
- */
- .page {
-   margin-bottom: $spacing-unit * 2;
-   padding: $spacing-unit * 2;
-   .post-title {
-     text-align: center;
-     font-weight: bold;
-     font-size: 3em;
-   }
-   margin-bottom: $spacing-unit * 2;
- }
- .post-page-header {
-   font-family: $base-font-family;
-   color: $background-color;
-   position: relative;
-   .trigger {
-     display: none;
-   }
-   .header-image {
-     position: relative;
-     img {
-       max-height: 100vh;
-       width: 100%;
-     }
-   }
-   .site-nav {
-     position: absolute;
-     top: 6%; right: 10%;
-     z-index: 7;
-     .menu-icon {
-       font-size: 1.5em;
-       margin-top: 5px;
-     }
-   }
-   .overlay {
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     background-color: #000;
-     opacity: 0.8;
-     z-index: 1;
-   }
-  .site-title {
-      position: absolute;
-      top: 5%; left: 2%;
-      text-align: left;
-      z-index: 2;
-      .site-initials {
-        color: $background-color;
-        font-size: 3em;
-        font-weight: bold;
-        padding-left: $spacing-unit / 2;
-        &:hover {
-          text-decoration: none;
-        }
-      }
-    }
-    .post-header {
-      z-index: 3;
-      width: 100%;
-      height: 30%;
-      margin: auto;
-      position: absolute;
-      top:0; bottom: 0; left: 0; right: 0;
-      text-align: center;
-      .post-title {
-        color: $background-color;
-        font-weight: bold;
-        font-size: 4em;
-      }
-      .post-meta {
-        font-size: $base-font-size;
-      }
-   }
- }
-
- .page-content {
-   .image-attribution {
-     margin-left: 30px;
-     padding-left: 0px;
-     font-size: $base-font-size / 1.3;
-   }
-   .post-content {
-     font-size: $base-font-size;
-     font-family: $base-font-family;
-     .post-page-lede {
-       font-style: italic;
-     }
-   }
- }
-
-.related-posts {
-  h3 {
-    font-size: 32px;
-    font-weight: bold;
-  }
-}
-
-/**
- * Front page post card styles
- */
-.card {
-  border: 1px solid $grey-color-light;
-  background-color: $card-background;
-  width: 100%;
-  margin-bottom: $spacing-unit / 2;
-  margin-top: $spacing-unit / 2;
-  font-family: $base-font-family;
-  h2 {
-    font-weight: bold;
-    line-height: 1.2;
-    clear: both;
-  }
-  a {
-    color: $text-color;
-    &:hover {
-      color: $text-color;
-      text-decoration: none;
-    }
-  }
-  h3 {
-    color: $green-color;
-    font-weight: bold;
-    margin-top: -10px;
-  }
-  p {
-    color: $grey-color-dark;
-    line-height: $base-line-height / 1.2;
-  }
-  .card-img {
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
-    float: left;
-    margin-bottom: 10px;
-  }
-  .dek {
-    float: left;
-    margin-bottom: 2em;
-  }
-  .lede {
-    float: left;
-    clear: both;
-  }
-  .button {
-    text-align: center;
-    height: $button-height;
-    width: $button-width;
-    font-size: $button-font;
-    background-color: $green-color;
-    padding-top: 10px;
-    margin: $spacing-unit auto;
-    clear: both;
-    a {
-      color: $background-color;
-    }
-    &:hover {
-      background-color: $green-color-dark;
-    }
-  }
-}
-
-.post-content {
-  padding: 0 $spacing-unit;
-}
-
-.row-1 {
-  h2 {
-    font-size: $card1-h2;
-  }
-  h3 {
-    font-size: $card1-h3;
-  }
-  p {
-    font-size: $card1-p;;
-  }
-}
-
-.row-2 {
-  h2 {
-    font-size: $card2-h2;
-  }
-  h3 {
-    font-size: $card2-h3;
-  }
-  p {
-    font-size: $card2-p;
-  }
-  .card-img {
-    height: 300px;
-  }
-}
-
-.row-3 {
-  h2 {
-    font-size: $card3-h2;
-  }
-  h3 {
-    font-size: $card3-h3;
-  }
-  p {
-    font-size: $card3-p;
-  }
-  .card-img {
-    height: 150px;
-    overflow: hidden;
-  }
-}
-
-/**
- *  tag-related styles
- */
-.header-tag-title {
-  font-family: $base-font-family;
-  font-weight: bold;
-  font-size: $card2-h2;
-  margin-top: $spacing-unit;
-  text-align: center;
-  .title-tag {
-    text-transform: uppercase;
-    color: $green-color;
-  }
-}
-.tag-card {
-  margin-bottom: $spacing-unit * 2;
-  .lede {
-    float: left;
-  }
-  .button {
-    clear: both;
-  }
-}
-
-.footer-tag {
-  margin: $spacing-unit;
-  .tag-btn {
-    margin: $spacing-unit 5px;
-    height: 25px;
-    padding: 5px 12px;
-    border: 2px solid $grey-color;
-    border-radius: 5px;
-    &:hover {
-      background: $green-color;
-      border-color: $green-color;
-    }
-  }
-  .tag {
-    text-transform: uppercase;
-    color: $grey-color;
-    &:hover {
-      text-decoration: none;
-      color: $background-color;
-    }
-  }
-}
-
-
-/**
- * Footer
- */
- .site-footer {
-   text-align: center;
-   padding: $spacing-unit / 2;
-   font-family: $base-font-family;
-   color: $background-color;
-   background-color: $green-color;
-   a {
-     color: $background-color;
-     text-decoration: none;
-     font-size: 31px;
-     &:hover {
-       color: $grey-color;
-       text-decoration: none;
-     }
-   }
-   .footer-heading {
-     font-size: 18px;
-   }
-   .text, .site-email {
-     font-size: 14px;
-     margin-bottom: $spacing-unit;
-   }
-   .copyright {
-     font-size: 12px;
-     margin-top: $spacing-unit / 2;
-   }
- }
 
  .pagination {
    text-align: center;
+	 padding: 2em;
    font-size: $base-font-size * 1.5;
-   font-family: $base-font-family;
+   font-family: $secondary-font-family;
    margin-top: $spacing-unit * 2;
    margin-bottom: $spacing-unit * 2;
    color: $green-color;
    font-weight: bold;
+	 display: flex;
+	 justify-content: space-between;
+	 align-items: center;
    a {
      color: $text-color;
      &:hover {
@@ -349,198 +25,75 @@
        color: $text-color;
      }
    }
+
+	 .pages {
+		 flex-grow: 2;
+	 }
  }
 
- @include media-query($on-palm) {
-   .site-title {
-     font-size: $card3-h2;
-   }
-   .site-phrase {
-     display: none;
-   }
-   .menu-icon {
-     display: block;
-     float: right;
-     color: $background-color;
-     z-index: 4;
-     &:hover, &:active, &:visited {
-       color: $background-color;
-     }
-   }
-   .trigger {
-     display: none;
-   }
-   .show {
-     display: none;
-     width: 100%;
-     position: relative;
-     bottom: -30%;
-     text-align: center;
-     .site-email {
-       text-transform: lowercase;
-     }
-   }
-   .open-nav {
-     height: 100%;
-     width: 100%;
-     background-color: $green-color;
-     z-index: 10;
-     position: fixed;
-     top: 0; left: 0;
-     transition: 0.5s;
-     .nav-title {
-       display: inline-block;
-       font-size: .85em;
-       position: relative;
-       margin-top: 3.5px;
-       padding-top: $spacing-unit;
-       padding-left: $spacing-unit * 2;
-     }
-     .menu-icon {
-       padding-top: $spacing-unit;
-       padding-right: $spacing-unit * 2;
-     }
-     .trigger {
-       display: block;
-       position: relative;
-       top: 50%;
-       width: 100%;
-       margin-top: $spacing-unit * 4;
-       text-align: center;
-       a {
-         display: block;
-         transition: .3s;
-         margin: $spacing-unit;
-       }
-     }
-     .nav-footer {
-       a {
-         margin: 0 -10px;
-       }
-     }
-   }
-   .card {
-     h2 {
-       font-size: $card2-h2;
-     }
-     h3 {
-       font-size: $card2-h3;
-     }
-     p {
-       font-size: $card2-p;;
-     }
-   }
-   .row-1, .row-3, .tag-card {
-     .card-img {
-       height: 300px;
-     }
-   }
-   .post-page-header {
-     .site-title {
-       font-size: 1em;
-     }
-     .post-header {
-       font-size: .5em;
-       padding: 15px;
-     }
-     .open-nav {
-       position: fixed;
-       top: 0; left: 0;
-       font-weight: bold;
-       a {
-         color: $background-color;
-         text-decoration: none;
-         &:hover {
-           color: $grey-color;
-           text-decoration: none;
-         }
-       }
-       .nav-title {
-         font-size: 1.5em;
-         text-transform: uppercase;
-       }
-       .trigger {
-         position: absolute;
-         top: 10%;
-         font-size: 1.3em;
-         letter-spacing: 0.65px;
-       }
-       .nav-footer {
-         position: absolute;
-         bottom: 12%;
-         text-align: center;
-         font-size: 1.35em;
-       }
-     }
-   }
- };
+ @media screen and (max-width: 990px){
 
- 	@media only screen and (max-width : 550px) {
-    .card-img {
-      max-height: 150px;
-    }
-    .lede {
-      float: left;
-    }
-    .button {
-      clear: both;
-    }
- 	}
+	 .card {
+		 .card-img {
+       max-height: 250px;
+     }
+		 .post-title {
+			 font-size: 1.5rem;
+		 }
 
-	@media only screen and (max-width : 480px) {
-    .tag-card {
-      .dek {
-        margin-bottom: $card2-h3 * 4;
-      }
-      .lede {
-        margin-top: 8px;
-      }
-    }
-    .post-page-header {
-      .site-title {
-        font-size: .5em;
-      }
-      .post-header {
-        font-size: .35em;
-        padding: 15px;
-        .post-meta {
-          font-size: 3em;
-        }
-      }
-    }
-	}
+		 .post-dek {
+			 font-size: 1rem;
+		 }
 
-  @media only screen and (min-width : 992px) {
-    .card {
-      h2 {
-        font-size: $card2-h2;
-      }
-      h3 {
-        font-size: $card2-h3;
-      }
-      p {
-        font-size: $card2-p;
-      }
-      .dek {
-        height: $card1-h2 * 2;
-      }
-    }
-    .tag-card {
-      .lede {
-        height: $card2-p * 17;
-      }
-    }
-	}
+		 .post-lede {
+			 font-size: 1.1rem;
+		 }
 
-  @media only screen and (min-width : 1200px) {
-    .card {
-      .dek {
-        height: $card1-h2 * 2;
+		 .button {
+			 font-size: 1rem;
+	 		 height: $button-height - 5;
+	 		 width: $button-width - 50;
+		 }
+	 }
+ }
+
+ @media screen and (max-width: 420px) {
+	 .container-fluid {
+		 padding: 0;
+	 }
+
+	 .card {
+
+      .card-img {
+        height: 110px;
       }
-    }
-    .tag-card {
-      .lede {
-        height: $card2-p * 14;
-      }
-    }
-	}
+  		.post-content {
+   	  	padding: 0 1em;
+   		}
+  	 .post-title {
+  		 font-size: 1.1rem;
+  	 }
+
+  	 .post-dek {
+  		 font-size: .80rem;
+  	 }
+
+  	 .post-lede {
+  		 font-size: .85rem;
+  		 padding: 0 .10em;
+  	 }
+
+     .button {
+       font-size: .80rem;
+       height: $button-height - 10;
+       width: $button-width - 75;
+     }
+	 }
+
+	 .pagination {
+		 margin: 0em auto;
+		 .pages, .fa-chevron-left, .fa-chevron-right {
+			 font-size: .98rem;
+		 }
+	 }
+ }

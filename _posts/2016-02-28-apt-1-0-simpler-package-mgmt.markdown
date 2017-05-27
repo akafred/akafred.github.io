@@ -6,7 +6,7 @@ lede:   "If you're a Debian (or Ubuntu) Linux user you can probably use the simp
 date:   2016-02-28 08:00:00
 categories: linux devops package-management debian ubuntu
 tags: linux devops package-management debian ubuntu
-image: /assets/post4-image.jpeg
+image: /assets/post4-image.jpg
 image-src: https://www.pexels.com/photo/gray-laptop-computer-showing-html-codes-in-shallow-focus-photography-160107/
 image-creator-name: Negative Space
 image-creator-url: http://negativespace.co/photos/laptop-notebook-and-iphone-stock-photo/

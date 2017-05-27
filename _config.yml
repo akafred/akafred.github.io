@@ -1,7 +1,7 @@
 # Site settings
 title: "TIL: Today I Learned"
 initials: "T I L"
-phrase: "today i learned"
+phrase: "TODAY I LEARNED"
 email: akafred@akafred.com
 description: > # this means to ignore newlines until "baseurl:"
   Writings on system development and operations. Stuff I learn.
@@ -22,3 +22,4 @@ paginate_path: "/blog/page:num"
 #Plugins
 gems:
   - jekyll-paginate
+  - octopress-autoprefixer

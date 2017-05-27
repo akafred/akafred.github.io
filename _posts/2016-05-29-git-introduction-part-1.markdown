@@ -7,7 +7,7 @@ date:   2016-05-29 21:00:00
 update: 2017-04-24 21:05:00
 categories: git dvcs
 tags: git dvcs
-image: /assets/post1-image.jpeg
+image: /assets/124.jpg
 image-src: https://www.pexels.com/photo/shallow-focus-photography-of-black-and-gray-cordless-computer-mouse-near-black-flat-screen-computer-monitor-and-silver-and-black-laptop-computer-on-white-desk-60324/
 image-creator-name: Unsplash
 image-creator-url: www.unsplash.com

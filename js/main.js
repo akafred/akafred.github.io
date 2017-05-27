@@ -36,11 +36,33 @@ if(window.location.hash) {
   filter(tag);
 }
 
-//nav functions
-$(document).ready(function() {
-  $(".site-nav").on("click", function() {
-    $(this).toggleClass("open-nav");
-    $(".open-nav").slideDown();
-    $(".nav-footer").toggleClass("show");
-  });
+
+$(document).ready(function(){
+ $('.menu-icon').click(function(){
+  $('.menu-icon').data('clicked', true);
+  $('.site-nav, .menu-container, .title-menu, .menu-icon span').toggleClass('show-menu');
+ });
+
+ $(window).on("scroll", function(e){
+  if ($(window).scrollTop() >= $(".post-header").height()) $(".post-header").css('opacity', '0.3');
+    else $(".post-header").css('opacity', '1');
+
+    if ($(window).scrollTop() >= $(".post-page-header").height()){
+      $('.post-page-header .site-nav').css({
+        'background-color': 'white',
+        'color': 'black'
+      });
+
+      $('.post-page-header .menu-icon span').css('background-color', 'black');
+
+    } else {
+      $('.post-page-header .site-nav').css({
+        'background-color': 'transparent',
+        'color': 'white'
+      });
+
+      $('.post-page-header .menu-icon span').css('background-color', 'white');
+    }
+
+ });
 });

@@ -1,0 +1,142 @@
+.site-nav {
+  font-family: $secondary-font-family;
+  background-color: $light-background;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0px;
+  z-index: 100000;
+
+  .site-nav-container {
+    width: 82%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: 780px) {
+      width: 90%;
+      flex-flow: row wrap;
+      justify-content: center;
+    }
+  }
+
+  a {
+    font-family: inherit;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  @media screen and (max-width: 780px) {
+    &.show-menu {
+      height: 100vh;
+      background-color: $light-background;
+    }
+  }
+}
+
+.nav-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  flex: 1 0 50%;
+
+  &:hover {
+    color: lighten($text-color, 15%);
+  }
+}
+
+
+.menu-list {
+  font-size: .92rem;
+
+  a {
+   color: lighten($text-color, 20%);
+   font-weight: bold;
+   letter-spacing: 1px;
+
+   &:not(:last-of-type) {
+    margin-right: 2em;
+   }
+
+   &:hover {
+    color: darken($text-color, 30%);
+   }
+
+   @media screen and (max-width: 780px) {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: 2em auto;
+    font-size: 1.2rem;
+   }
+  }
+}
+
+.menu-icon, .nav-footer{
+  display: none;
+
+  @media screen and (max-width: 780px) {
+    display: block;
+  }
+}
+
+.menu-icon {
+  width: 23px;
+  height: auto;
+  cursor: pointer;
+
+  span {
+   display: block;
+   width: 100%;
+   height: 3px;
+   background-color: $text-color;
+  }
+
+  span:not(:last-of-type) {
+   margin-bottom: .25em;
+  }
+}
+
+.nav-footer {
+  text-align: center;
+
+  i {
+   font-size: 1.6rem;
+   margin: .30em .50em;
+  }
+}
+
+@media screen and (max-width: 780px) {
+
+  .title-menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    &.show-menu {
+      align-self: flex-start;
+      margin-top: 1em;
+    }
+
+    .site-phrase {
+     display: none;
+    }
+  }
+
+  .menu-container {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &.show-menu {
+      display: block;
+    }
+  }
+}

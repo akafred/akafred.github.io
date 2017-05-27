@@ -3,10 +3,11 @@
 ---
 @charset "utf-8";
 
-@import url("https://fonts.googleapis.com/css?family=Muli:400,600,700,800");
+@import url("https://fonts.googleapis.com/css?family=Muli:400,600,700,800|Merriweather:300,300i,400,700,900");
 
 // Our variables
-$base-font-family: Muli, sans-serif;
+$base-font-family: 'Merriweather', serif;
+$secondary-font-family: 'Muli', sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
@@ -17,25 +18,26 @@ $button-height: 50px;
 $button-width: 180px;
 
 // Main card row variables
-$card1-h2:         2.4em;
-$card1-h3:         1.5em;
-$card1-p:          1.4em;
+$card1-h2:         2rem;
+$card1-h3:         1.1rem;
+$card1-p:          1.3rem;
 
 //Second card row variables
-$card2-h2:         2em;
-$card2-h3:         1.3em;
-$card2-p:          1.2em;
+$card2-h2:         1.5rem;
+$card2-h3:         1em;
+$card2-p:          1.1em;
 
 // Third card row variables
-$card3-h2:         1.5em;
-$card3-h3:         1em;
-$card3-p:          0.9em;
+$card3-h2:         1.3rem;
+$card3-h3:         .95rem;
+$card3-p:          1rem;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
-$background-color: #f3f3f3;
-$card-background:  #fdfdfd;
+$text-color:       #333333;
+$light-text: 			 #ffffff;
+$light-background: #ffffff;
+$card-background:  #ffffff;
 $brand-color:      #78C0E0;
 
 $green-color:      #587B7F;
@@ -47,25 +49,6 @@ $grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
 $content-width:    800px;
-
-$on-palm:          950px;
-$on-laptop:        1200px;
-
-
-
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
-
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)

@@ -3,8 +3,7 @@
     <div class="wrapper container">
 
         <div class="site-title col-md-6">
-          <a href="{{ site.baseurl }}/">{{ site.initials }} </a>
-          <a class="site-phrase" href="{{ site.baseurl }}/"> // &nbsp; {{ site.phrase }}</a>
+          <a href="{{ site.url }}">{{ site.initials }} <span class="site-phrase"> - {{ site.phrase }}</span></a>
         </div>
 
         {% include nav-menu.html %}

@@ -7,13 +7,9 @@ title: Tag
   {% assign t = tag | first %}
   {% assign posts = tag | last %}
 
-	<div class="post-list container blog-list-container hidden" id="{{ t }}-container">
+	<div class="blog-list-container hidden" id="{{ t }}-container">
 
-    <div class="header-tag-title">
-        <h2>
-          Tag: <span class="title-tag">{{ t }}</span>
-        </h2>
-    </div>
+  <h2 class="tag-title"> Tag: <span class="title-tag">{{ t }}</span></h2>
 
     <div class="row-1">
   		{% for post in posts limit: 1 %}
