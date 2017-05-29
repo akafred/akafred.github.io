@@ -22,4 +22,3 @@ paginate_path: "/blog/page:num"
 #Plugins
 gems:
   - jekyll-paginate
-  - octopress-autoprefixer

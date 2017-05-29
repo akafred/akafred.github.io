@@ -95,7 +95,8 @@
 
 .row-1 {
 	margin-top: 2em;
-	animation-duration: 1.5s;
+	-webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
   .post-title {
     font-size: $card1-h2;
   }

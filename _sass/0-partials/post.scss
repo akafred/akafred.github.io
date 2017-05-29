@@ -77,9 +77,10 @@
 		 position: absolute;
 		 top: 50%;
 		 left: 50%;
-		 transform: translate(-50%, -50%);
+		 -webkit-transform: translate(-50%, -50%);
+             transform: translate(-50%, -50%);
 		 text-align: center;
-		 
+
 		 .post-title {
 			 color: $light-text;
 			 font-weight: bold;
@@ -139,7 +140,7 @@
 
 .footer-tag {
   margin: 3em 1em;
-  padding-bottom: 5em; 
+  padding-bottom: 5em;
 
   .tag-btn {
   	display: inline-block;
