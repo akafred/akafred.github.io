@@ -6,6 +6,13 @@ lede:   "Using a static site generation tool for your blog makes your blog perfo
 date:   2014-12-07 12:00:00
 update: 2014-12-16 20:00:00
 categories: static-site-generation jekyll docker blogging clicky disqus
+tags: static-site-generation jekyll docker blogging clicky disqus
+image: /assets/post7-image.jpg
+image-src: https://www.pexels.com/photo/hands-coffee-cup-apple-5199/
+image-creator-name: Stokpic
+image-creator-url: http://stokpic.com/project/mans-hands-typing-on-laptop-with-smartphone-book-and-coffee/
+image-license: CC0 License
+image-license-url: https://www.pexels.com/photo-license/
 ---
 _Aller anfang ist schwer_ my German teacher told us, and oh my! does that apply to blogging when you are a techie, who—in theory at least—could have *built* a blogging platform _if you just had the time_. It does not help that you have [extremely capable colleagues][kodemaker] who probably have done just that. Obviously the abandoned WordPress-blog from yesteryear does not cut it anymore ...
 

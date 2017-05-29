@@ -1,0 +1,151 @@
+/**
+ * Front page post card styles
+ */
+.card {
+	border-radius: 5px;
+  background-color: $card-background;
+  width: 100%;
+  margin-bottom: $spacing-unit / 2;
+  margin-top: $spacing-unit / 2;
+	padding-bottom: .10em;
+  font-family: $base-font-family;
+  h2 {
+    font-weight: 700;
+    line-height: 1.2;
+    clear: both;
+  }
+  a {
+    color: $text-color;
+    &:hover {
+      color: $text-color;
+      text-decoration: none;
+    }
+  }
+  p {
+    color: $grey-color-dark;
+    line-height: $base-line-height / 1.2;
+  }
+  .card-img {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+		position: relative;
+		margin-bottom: .60em;
+    float: left;
+
+		&:after {
+			content: "";
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, .2);
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+  }
+
+	.post-title {
+		float: left;
+		clear: both;
+		font-weight: 900;
+
+		&:hover {
+			color: lighten($text-color, 15%);
+		}
+	}
+
+	.post-dek {
+		float: left;
+		margin: 1em auto 0 auto;
+		clear: both;
+	}
+
+	.post-lede {
+		float: left;
+		text-align: left;
+		clear: both;
+		margin: 1em auto 1.3em auto;
+		line-height: 1.5;
+	}
+  .button {
+    text-align: center;
+    height: $button-height;
+    width: $button-width;
+		font-family: $secondary-font-family;
+    font-size: $button-font;
+    background-color: $green-color;
+    padding-top: 10px;
+		margin: 1em auto;
+    clear: both;
+		border-radius: 2px;
+		cursor: pointer;
+    a {
+      color: $light-text;
+    }
+    &:hover {
+      background-color: $green-color-dark;
+    }
+  }
+}
+
+.post-content {
+  padding: 0 $spacing-unit;
+}
+
+.row-1 {
+	margin-top: 2em;
+	-webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  .post-title {
+    font-size: $card1-h2;
+  }
+  .post-dek {
+    font-size: $card1-h3;
+  }
+  .post-lede {
+    font-size: $card1-p;
+  }
+}
+
+.row-2 {
+	margin: 2em 0;
+	.post-title {
+    font-size: $card2-h2;
+  }
+  .post-dek {
+    font-size: $card2-h3;
+  }
+  .post-lede {
+    font-size: $card2-p;
+  }
+  .card-img {
+    height: 300px;
+  }
+}
+
+.row-3 {
+	.post-content {
+	  padding: 0 1em;
+	}
+
+	.post-title {
+    font-size: $card3-h2;
+  }
+  .post-dek {
+    font-size: $card3-h3;
+  }
+  .post-lede {
+    font-size: $card3-p;
+  }
+  .card-img {
+    height: 150px;
+    overflow: hidden;
+  }
+
+	.button {
+		font-size: 1rem;
+		height: $button-height - 5;
+		width: $button-width - 50;
+	}
+}

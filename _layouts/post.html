@@ -1,18 +1,124 @@
----
-layout: default
----
-<div class="post">
+<!DOCTYPE html>
+<html>
 
-  <header class="post-header">
-	{% if page.dek %}<h2 class="post-dek">{{page.dek}}</h2>{% endif %}
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.update %} • <em>Updated: {{ page.update | date: "%b %-d, %Y" }}</em>{% endif %}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+{% include head.html %}
+
+<body>
+
+  <header class="post-page-header">
+
+    {% include nav-menu.html %}
+
+    <div class="header-image">
+      <div class="overlay"></div>
+      <img class="img-responsive" src="{{ page.image }}"/>
+    </div>
+
+    <div class="post-header">
+      <h1 class="post-title">{{ page.title }}</h1>
+      <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.update %} &nbsp; | &nbsp; <em>Updated: {{ page.update | date: "%b %-d, %Y" }}</em>{% endif %}{% if page.author %} &nbsp; | &nbsp; {{ page.author }}{% endif %}{% if page.meta %} &nbsp; | &nbsp; {{ page.meta }}{% endif %}</p>
+    </div>
+
   </header>
 
-  <article class="post-content">
-    {% if page.lede %}<p class="post-lede">{{page.lede}}</p>{% endif %}
-    {{ content }}
-  </article>
+  <div class="post-page-content">
+      <div class="post">
+        <div class="image-attribution">
+          <h3>
+          {% if page.image-src %}<a href="{{ page.image-src }}">Photo</a> {% endif %}
+          by
+          {% if page.image-creator-name %}<a href="{{ page.image-creator-url }}">{{ page.image-creator-name }}</a> {% endif %}
+          /
+          {% if page.image-license %}<a href="{{ page.image-license-url }}">{{ page.image-license }}</a> {% endif %}
+          | Modified from original.
+          </h3>
+        </div>
 
-  {% include disqus.html %}
-</div>
+        <article class="post-content">
+          {% if page.lede %}
+          <p class="post-page-lede">{{page.lede}}</p>{% endif %} {{ content }}
+        </article>
+        <div class="footer-tag">
+          <h2>
+          <i class="fa fa-tags"></i>
+					{% if page.tags.size > 0 %}
+					     {% for tag in page.tags %}
+               <span class="tag-btn">
+                <a href="{% if site.baseurl == "" %}/tag#{{ tag }}{% else %}{{ site.baseurl }}/tag#{{ tag }}{% endif %}" class="tag">{{ tag }}</a>
+              </span>
+               {% endfor %}
+			    {% endif %}
+          </h2>
+          {% include disqus.html %}
+        </div>
+
+
+        {% assign posts_list = "" | split: "|" %}
+
+        {% if page.tags %}
+          {% for each_tag in page.tags %}
+            {% for each_post in site.tags[each_tag] %}
+              {% if each_post.title != page.title %}
+                {% assign posts_list = posts_list | push: each_post %}
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+
+          {%if posts_list != 3 %}
+            {% for post in site.posts %}
+              {% if post.title != page.title %}
+                {% assign posts_list = posts_list | push: post %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+
+          {% assign posts_list = posts_list | uniq %}
+        {% else %}
+          {% assign posts_list = site.posts %}
+        {% endif %}
+    </div>
+  </div> 
+
+  <div class="related-posts">
+      {% if posts_list %}
+      <h3>Related Posts</h3>
+      {% endif %}
+
+      <div class="row-3">
+          {% for post in posts_list limit: 3 %}
+          <div class="col-md-4 col-xs-12">
+            <div class="card animated slideInUp">
+              {% if post.image %}
+              <div class="card-img">
+                <img class="img-responsive" src="{{ post.image }}" />
+              </div>
+              {% endif %}
+              <div class="post-content">
+                <h2>
+                  <a class="post-link post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                </h2>
+                {% if post.dek %}
+                  <i class="post-dek">&mdash; {{post.dek}}</i>
+                {% endif %}
+                {% if post.lede %}
+                <div class="lede">
+                  <p class="post-lede">{{post.lede}}</p>
+                </div>
+                {% endif %}
+              </div>
+              <div class="button">
+                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">READ MORE</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+  </div>
+
+  {% include footer.html %}
+  {% include tracking.html %}
+
+  <script src="{{ "/js/main.js" | prepend: site.baseurl }}" ></script> 
+</body>
+
+</html>

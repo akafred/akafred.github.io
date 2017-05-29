@@ -1,0 +1,3 @@
+# Main-nav menu section
+menu:
+- {name: About, url: '/about/'}

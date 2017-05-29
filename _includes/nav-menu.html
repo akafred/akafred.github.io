@@ -1,0 +1,38 @@
+<nav class="site-nav">
+  <div class="site-nav-container">
+  <div class="title-menu">
+    <div class="nav-title">
+      <a href="{{ site.url }}"><span class="site-initials">{{ site.initials }}</span> <span class="site-phrase">- {{ site.phrase }}</span></a>
+    </div>
+
+    <div class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+    <div class="menu-container">
+      <div class="menu-list">
+          <a href="{{ site.url }}" >Home</a>
+        {% for item in site.data.settings.menu %}
+          <a href="{% if site.baseurl == "" %}{{ item.url }}{% else %}{{ item.url | prepend: site.baseurl }}{% endif %}">{{ item.name }}</a>
+        {% endfor %}
+          <a href="{{ " /feed.xml " | prepend: site.baseurl }}">RSS</a>
+      </div>
+
+      <div class="nav-footer">
+        <div class="social-media">
+          <a href="https://twitter.com/{{ site.twitter_username }}">
+            <i class="fa fa-twitter-square"></i>
+          </a>
+          <a href="https://github.com/{{ site.github_username }}">
+            <i class="fa fa-github-square"></i>
+          </a>
+        </div>
+
+        <a class="site-email" href="mailto:{{ site.email }}" target="_top">{{ site.email }}</a>
+      </div>
+    </div>
+  </div>
+</nav>

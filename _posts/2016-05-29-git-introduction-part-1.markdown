@@ -6,7 +6,15 @@ lede:   "Is git occasionally (or often) a mystery to you? - You are not alone! I
 date:   2016-05-29 21:00:00
 update: 2017-04-24 21:05:00
 categories: git dvcs
+tags: git dvcs
+image: /assets/124.jpg
+image-src: https://www.pexels.com/photo/shallow-focus-photography-of-black-and-gray-cordless-computer-mouse-near-black-flat-screen-computer-monitor-and-silver-and-black-laptop-computer-on-white-desk-60324/
+image-creator-name: Unsplash
+image-creator-url: www.unsplash.com
+image-license: CC0 License
+image-license-url: https://www.pexels.com/photo-license/
 ---
+
 A former client adopted git recently and not everyone there knew distributed version control all that well. To bring them up to speed I created a set of small "lessons" pointing to good resources. After a few lessons I promise that you will have fewer git-induced headaches.
 
 Each lesson typically contains a link to a video, a blog post, or something similar. There will be content for all levels, both beginners and those more experienced. I even think the odd expert might find a tip or two.

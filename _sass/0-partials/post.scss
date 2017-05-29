@@ -1,0 +1,183 @@
+.post-page-header {
+	font-family: $base-font-family;
+	color: $text-color;
+	position: relative;
+	min-height: 550px;
+	color: $light-text;
+	background-color: $light-background;
+	width: 100%;
+
+	.header-image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		img {
+		 width: 100%;
+		 height: 100%;
+		 margin: 0 auto;
+		}
+	}
+
+	.site-nav {
+	 background-color: transparent;
+	 color: $light-text;
+
+	 a {
+	  color: inherit;
+	 }
+
+	 .menu-icon {
+	  width: 23px;
+	  height: auto;
+	  cursor: pointer;
+
+	  span {
+	   display: block;
+	   width: 100%;
+	   height: 3px;
+	   background-color: $light-text;
+
+	   &.show-menu {
+		 background-color: $text-color;
+	   }
+	  }
+
+	  span:not(:last-of-type) {
+	   margin-bottom: .25em;
+	  }
+	 }
+
+	 &.show-menu {
+	  background-color: $light-background;
+	  color: $text-color;
+
+	  @media screen and (max-width: 600px) {
+	  	background-color: $light-background;
+	  }
+	 }
+	}
+
+	.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #000;
+		opacity: 0.8;
+		z-index: 1;
+	}
+	 .post-header {
+		 z-index: 3;
+		 width: 100%;
+		 margin: 0 auto;
+		 position: absolute;
+		 top: 50%;
+		 left: 50%;
+		 -webkit-transform: translate(-50%, -50%);
+             transform: translate(-50%, -50%);
+		 text-align: center;
+
+		 .post-title {
+			 color: $light-text;
+			 font-weight: bold;
+			 font-size: 3rem;
+			 padding: 0 1em;
+
+			 @media screen and (max-width: 600px) {
+	 		  font-size: 2rem;
+			}
+		 }
+		 .post-meta {
+			 font-size: $base-font-size;
+		 }
+	}
+}
+
+.post-page-content {
+	background-color: $light-background;
+	margin: 0 auto;
+
+	@media screen and (max-width: 900px) {
+	 width: 100%;
+	}
+
+	.post {
+	 width: 60%;
+	 margin: 0 auto;
+
+	 @media screen and (max-width: 980px) {
+	  width: 90%;
+	 }
+	}
+
+	.image-attribution {
+		margin-left: 30px;
+		padding-left: 0px;
+		font-size: $base-font-size / 1.3;
+	}
+	.post-content {
+		margin: 3em auto 0 auto;
+		font-size: $base-font-size;
+		font-family: $base-font-family;
+
+		@media screen and (max-width: 600px) {
+	  	 padding: 0;
+	 	}
+
+		.post-page-lede {
+			font-style: italic;
+		}
+
+		a:hover {
+		 text-decoration: none;
+		}
+	}
+}
+
+.footer-tag {
+  margin: 3em 1em;
+  padding-bottom: 5em;
+
+  .tag-btn {
+  	display: inline-block;
+  	margin: .20em;
+  }
+
+  .tag {
+   font-size: 1rem;
+   color: lighten($text-color, 25%);
+   background-color: #eeeeee;
+   border-radius: 5px;
+   padding: .5em 1em;
+
+   &:hover {
+    background-color: darken(#eeeeee, 15%);
+    text-decoration: none;
+   }
+
+   @media screen and (max-width: 500px) {
+	  font-size: .90rem;
+	}
+  }
+}
+
+.related-posts {
+	padding: 0 2em;
+	margin: 2em 0;
+
+	.col-xs-12 {
+	 @media screen and (max-width: 500px) {
+	  padding: 0;
+	 }
+	}
+
+	 h3 {
+	  font-size: 32px;
+	  font-weight: bold;
+	  clear: both;
+	 }
+}

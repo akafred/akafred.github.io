@@ -1,6 +1,11 @@
 /**
  * Reset some basic elements
  */
+* {
+	-webkit-transition: all .1s ease;
+	transition: all .1s ease;
+}
+
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -8,22 +13,31 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-
+html {
+	font-size: 16px;
+    height: 100%;
+}
 
 /**
  * Basic styling
  */
 body {
     font-family: $base-font-family;
-    font-size: $base-font-size;
+    font-size: 100%;
     line-height: $base-line-height;
     font-weight: 300;
     color: $text-color;
-    background-color: $background-color;
+    background-color: darken($light-background, 5%);
     -webkit-text-size-adjust: 100%;
 }
 
+.page-content {
+    margin-top: 50px;
+}
 
+.container-fluid {
+    max-width: 100%;
+}
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -98,7 +112,6 @@ a {
 
     &:hover {
         color: $text-color;
-        text-decoration: underline;
     }
 }
 
@@ -147,43 +160,6 @@ pre {
         padding-left: 0;
     }
 }
-
-
-
-/**
- * Wrapper
- */
-.wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
-    @extend %clearfix;
-
-    @include media-query($on-laptop) {
-        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
-    }
-}
-
-
-
-/**
- * Clearfix
- */
-%clearfix {
-
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-}
-
 
 
 /**

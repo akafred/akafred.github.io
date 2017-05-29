@@ -5,6 +5,13 @@ dek:    "Setting up and securing my server"
 lede:   "Years ago I set up a blog and a couple of other things on a shared hosting-server; this was so long ago that virtualized servers were rare. Long overdue I am moving to a virtual private server - with a lot more flexibility. First step is to set up some basic provisioning (I use Ansible) and secure the server (using ufw and fail2ban)."
 date:   2016-03-02 14:00:00
 categories: vps ansible ufw fail2ban debian vagrant
+tags: vps ansible ufw fail2ban debian vagrant
+image: /assets/post3-image.jpg
+image-src: https://www.pexels.com/photo/macbook-pro-94654/
+image-creator-name: Unsplash
+image-creator-url: www.unsplash.com
+image-license: CC0 License
+image-license-url: https://www.pexels.com/photo-license/
 ---
 
 ## The server
